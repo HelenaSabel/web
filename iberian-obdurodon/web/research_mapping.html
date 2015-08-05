@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Mapping analysis - Medieval Galician-Portuguese Poetry</title>
+        <meta charset="utf-8" />
+        <link href="CSS/index.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <!--#include virtual="NavMenu.html" -->
+        <h1>Mapping Medieval Galician-Portuguese Poets</h1>
+        <p>Between the twelfth and fourteenth centuries, there was a poetic movement in the
+            Galician-Portuguese language throughout the kingdoms of the Iberian Peninsula (with the
+            exception of Catalonia where they used Provençal). Medieval Galician-Portuguese
+                <em>Cantigas</em> (songs) remain as one of the richest parts of Iberian Peninsula's
+            Middle Ages heritage.</p>
+        <p>One thousand six hundred seventy nine songs written by 187 troubadours and minstrels
+            arrived to us in the form of the <em><a
+                    href="http://cantigas.fcsh.unl.pt/manuscritos.asp?ling=eng" target="_blank"
+                    >Cancioneiros</a></em> (sonbooks). In these project, we analize some of these
+            troubadours through time and space with the intention of gaining a better understanding
+            of how this poetic school had developed from a socio-historic point of view.</p>
+        <h2>Methodology</h2>
+        <h3>The personography</h3>
+        <ul>
+            <li>Using the <em><a href="http://cantigas.fcsh.unl.pt/index.asp?ling=eng"
+                        target="_blank">Base de datos da Lírica Profana Galego-Portuguesa
+                        (MedDB)</a></em> as our main source, we selected fifty-two troubadours
+                attending to diachronic criteria. We chose every poet from the first, fourth and
+                five periods: the lower number of poets from these periods forced us to select them
+                all so as to work with a significant corpus. From the second period, we left out the
+                seven poets with the lowest certainty about their biographies. For the selection of
+                the poets from the third period, which represents 75% of the corpus, besides
+                certainty, we added other criteria such as the origin (selecting every poet who
+                wasn't Galician or Portuguese, so other nationalities were represented) or the
+                number of songs preserved (as a way to discern the most important authors).</li>
+            <li>We used <a href="http://www.tei-c.org/Roma/" target="_blank">TEI Roma</a> to
+                customize our XML schema (read more at the <a href="http://www.tei-c.org/index.xml"
+                    target="_blank">Text Encoding Initiative</a> site).</li>
+            <li>For each poet, we marked-up his name, nationality, birthplace, social status,
+                occupation, and affiliation. We looked up this information into two databases: in
+                the <em><a href="http://cantigas.fcsh.unl.pt/index.asp?ling=eng" target="_blank"
+                        >MedDB</a></em> and the <em><a
+                        href="http://www.cirp.es/pls/bdo2/f?p=103:2:4773368442203375810"
+                        target="_blank">Cantigas Medievais Galego Portuguesas</a></em>. We have also
+                used <em><a href="http://en.wikipedia.org/wiki/Main_Page" target="_blank"
+                        >Wikipedia</a>
+                </em> to get additional biographical information (especially of kings and
+                counts).</li>
+            <li>We added a <code>@certainty</code> attribute inside every
+                    <code>&lt;nationality&gt;</code> element whose values go from "low" and "medium"
+                to "high". When there were was other pieces of information whose certainty was
+                questioned by our sources, we coded them using again this attribute with values that
+                went from "unknown" to "low and "medium."</li>
+            <li> We used <a href="https://www.google.com/maps" target="_blank">Google Maps</a> and
+                    <a href="http://tools.wmflabs.org/geohack/" target="_blank">GeoHack</a> to find
+                out the coordinates of every geographical reference we had in the personography.
+                Then we tagged them inside a <code>&lt;geo&gt;</code> element. Since we did not add
+                a <code>&lt;geoDecl&gt;</code> element in the TEI header to define a coordinate
+                system, we marked them up following the TEI default for such cases: the contents of
+                our <code>&lt;geo&gt;</code> element are a pair of numbers separated by whitespace,
+                to be interpreted as latitude followed by longitude according to the World Geodetic
+                System.</li>
+            <li>To sum up, this is a sample of the coding of one of the poets: <div class="code">
+                    <pre>
+&lt;person xml:id="JGarGlh"&gt;
+    &lt;persName&gt;Johan Garcia de Guilhade&lt;/persName&gt;
+    &lt;nationality key="pt" cert="high"&gt;Portuguese&lt;/nationality&gt;
+    &lt;birth&gt;
+        &lt;location&gt;
+            &lt;placeName&gt;Milhazes, Barcelos&lt;/placeName&gt;
+            &lt;geo&gt;41.490833,-8.660556&lt;/geo&gt;
+        &lt;/location&gt;
+    &lt;/birth&gt;
+    &lt;socecStatus key="kn"&gt;Knight&lt;/socecStatus&gt;
+    &lt;occupation key="tr"&gt;Troubadour&lt;/occupation&gt;
+    &lt;floruit from="1240" to="1265" period="3"&gt;
+        &lt;location corresp="#sousa" from="1240" to="1243"/&gt;
+        &lt;location corresp="#jaen" from="1244" to="1248"/&gt;
+        &lt;location corresp="#afonsX" from="1249" to="1253"/&gt;
+        &lt;location corresp="#afonsIII"  from="1253" to="1265"/&gt;
+    &lt;/floruit&gt;
+&lt;/person&gt;</pre>
+                </div>
+            </li>
+            <li>We marked-up an ancillary file with every one of the affiliations, which explains
+                the <code>@corresp</code> values inside <code>floruit/location</code>. We specified
+                whether every one of them depended on a royal or a lordship patronage. <div
+                    class="code">
+                    <pre>
+&lt;place xml:id="sousa" type="noble"&gt;
+    &lt;location&gt;
+        &lt;placeName type="short"&gt;The Sousas&lt;/placeName&gt;
+        &lt;placeName type="full"&gt;Court of D. Gonçalo Garcia de Sousa&lt;/placeName&gt;
+        &lt;geo&gt;41.087778,-8.520278&lt;/geo&gt;
+    &lt;/location&gt;
+&lt;/place&gt;</pre>
+                </div>
+            </li>
+
+        </ul>
+        <h3>The KML files</h3>
+        <ul>
+            <li>As a first step, we used XSLT for a XML to XML transformation in which we modified
+                the coordinates to the KML standard, that is: three numbers separated by a comma,
+                the first of them being the longitude, followed by the latitude and the altitude.
+                Since the altitude reference was meaningless for our project, we added a 100 value
+                as a default. <div class="code">
+                    <pre>
+&lt;xsl:template match="@*|node()"&gt;
+    &lt;xsl:copy&gt;
+        &lt;xsl:apply-templates select="@*|node()"/&gt;
+    &lt;/xsl:copy&gt;
+&lt;/xsl:template&gt;
+&lt;xsl:template match="geo"&gt;
+    &lt;geo&gt;
+        &lt;xsl:value-of select="concat(string-join((substring-after(current(), ','),
+            substring-before(current(), ',')), ','), ',100')"/&gt;
+    &lt;/geo&gt;
+&lt;/xsl:template&gt;</pre>
+                </div>
+            </li>
+            <li>Then we employed XSLT again to transform the recently created XML file to KML.</li>
+            <li>This transformation included two different <code>&lt;Placemark&gt;</code> elements
+                for each poet: one for their birthplace and one for their "journey." Inside the
+                second one, the coordinates were inserted as children of a
+                    <code>&lt;LineString&gt;</code> element to draw the paths. Thus, the mark-up for
+                one poet looks like this:<br />
+                <div class="code">
+                    <pre>
+&lt;Placemark&gt;
+    &lt;name&gt;Garcia Mendiz d' Eixo&lt;/name&gt;
+    &lt;description&gt;Eixo, Garcia Mendiz d' Eixo's place of birth&lt;/description&gt;
+    &lt;Style&gt;
+        &lt;IconStyle&gt;
+            &lt;Icon&gt;
+                &lt;href&gt;http://maps.google.com/mapfiles/kml/paddle/
+                    purple-stars.png&lt;/href&gt;
+            &lt;/Icon&gt;
+        &lt;/IconStyle&gt;
+    &lt;/Style&gt;
+    &lt;Point&gt;
+        &lt;coordinates&gt;-8.570415,40.631709,100&lt;/coordinates&gt;
+    &lt;/Point&gt;
+&lt;/Placemark&gt;
+&lt;Placemark&gt;
+    &lt;description&gt;Garcia Mendiz d' Eixo's journey&lt;/description&gt;
+    &lt;styleUrl&gt;#WhiteLine&lt;/styleUrl&gt;
+    &lt;LineString&gt;
+        &lt;tessellate&gt;0&lt;/tessellate&gt;
+        &lt;coordinates&gt;
+            -8.570415,40.631709,100 -8.47,40.24,100 -0.883533,41.650192,100 
+            -8.520278,41.087778,100 -5.570956,42.600636,100
+        &lt;/coordinates&gt;
+    &lt;/LineString&gt;
+&lt;/Placemark&gt;</pre>
+                </div>
+            </li>
+            <li>We stablished also a <code>&lt;Placemark&gt;</code> element for every one of the affiliations:<br />
+                <div class="code"
+                    ><pre>
+&lt;Placemark&gt;
+    &lt;name&gt;The Trabas&lt;/name&gt;
+    &lt;description&gt;House of Traba Court (noble court)&lt;/description&gt;
+    &lt;Style&gt;
+        &lt;IconStyle&gt;
+            &lt;Icon&gt;
+                &lt;href&gt;http://maps.google.com/mapfiles/kml/paddle/red-circle.png&lt;/href&gt;
+            &lt;/Icon&gt;
+        &lt;/IconStyle&gt;
+    &lt;/Style&gt;
+    &lt;Point&gt;
+        &lt;coordinates&gt;-7.71765,42.063,100&lt;/coordinates&gt;
+    &lt;/Point&gt;
+&lt;/Placemark&gt;</pre>
+                </div>
+            </li>
+            <li>Since we had used <code>@certainty</code> attributes to encode the information that
+                was dubious according to our sources, we referred to those values in our XSLT to
+                create different <code>&lt;IconStyle&gt;</code> elements.<br />
+                <div class="code">
+                    <pre>
+&lt;xsl:template match="person"&gt;
+    &lt;!--Other template rules--&gt;
+    &lt;IconStyle&gt;
+        &lt;xsl:choose&gt;
+            &lt;xsl:when test="birth[@cert='low']"&gt;
+                &lt;Icon&gt;
+                    &lt;href&gt;http://maps.google.com/mapfiles/kml/paddle/ltblu-blank.png&lt;/href&gt;
+                &lt;/Icon&gt;
+            &lt;/xsl:when&gt;
+            &lt;xsl:when test="birth/location[@cert='unknown'] | birth/location[@cert='low']"&gt;
+                &lt;Icon&gt;
+                    &lt;href&gt;http://maps.google.com/mapfiles/kml/paddle/ltblu-blank.png&lt;/href&gt;
+                &lt;/Icon&gt;
+            &lt;/xsl:when&gt;
+            &lt;xsl:otherwise&gt;
+                &lt;Icon&gt;
+                    &lt;href&gt;http://maps.google.com/mapfiles/kml/paddle/purple-stars.png&lt;/href&gt;
+                &lt;/Icon&gt;
+            &lt;/xsl:otherwise&gt;
+        &lt;/xsl:choose&gt;
+    &lt;/IconStyle&gt;
+    &lt;!--Other template rules--&gt;
+&lt;/xsl:template&gt;</pre>
+                </div>
+            </li>
+            <li>We used the <code>@period</code> attribute of our personography to create five
+                different KML files so we would have, as a result, one map for each period.</li>
+            <li>For one of the transformations, instead of using the <code>@period</code> attribute
+                as a filter, we introduced the range of years we had coded inside <code>@from</code>
+                and <code>@to</code> attributes within a <code>&lt;TimeSpan&gt;</code> element.</li>
+        </ul>
+        <h3>Embedding the maps in our website</h3>
+        <ul>
+            <li>We uploaded the KML files into <a href="https://www.google.com/maps" target="_blank"
+                    >Google Maps</a>.</li>
+            <li>Then we opened in the <a href="https://developers.google.com/maps-engine/"
+                    target="_blank">Google Maps Engine API</a>.</li>
+            <li>After adding an additional description to our maps, we published them, we changed
+                the sharing settings to "Public" and got the "shared link" that we introduced in our
+                HTML file inside an <code>&lt;iframe&gt;</code> element.</li>
+            <li>For embeding the Google Earth globe we used the <a
+                    href="http://dh.obdurodon.org/kml-gadget.xhtml">KML embed gadget</a>.</li>
+        </ul>
+        <h3>Other criteria</h3>
+        <ul>
+            <li>We specify the level of credibility of each one of our personography entries using
+                    <code>@certainty</code> attributes. This makes it possible for us to visually
+                represent that credibility with the intention of making these maps more legitimate
+                from a historiographic point of view.</li>
+            <li>When we couldn't stablish a birthplace from one of the poets, we used the
+                nationality information as a reference. Then we randomly selected a geographical
+                point for each nationality and employed those as the coordinates for the
+                birthplaces, adding a <code>@certainty="unknown"</code> attribute. For example, the
+                birthplace of every Galician poet we couldn't place is represented in the map as a
+                light blue pinpoint over what we could say it is the geographical center of the
+                Galician territory.</li>
+            <li>We were more rigorous when dealing with the poets' shifts than with the courts'
+                ones. This means that, for every affiliation, we chose the coordinates of what we
+                could define as the main court and used those sistematically.</li>
+        </ul>
+        <a href="#top">Go to top</a>
+    </body>
+</html>

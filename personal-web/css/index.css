@@ -10,6 +10,9 @@ body{
     font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
+svg {
+    margin-left:2%;
+}
 
 a.tooltip{
     outline:none;

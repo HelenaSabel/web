@@ -90,13 +90,13 @@ footer{
 
 div.main{
     float:left;
-    width:69%;
+    width:71%;
     padding-right:1%;
     border-right:1px solid #610000;
 }
 
 div.rightSide{
-   width:29%;
+   width:27%;
    float:right;
 }
 
@@ -139,12 +139,12 @@ svg {
 ul{
     font-size:1.5em;
     margin-left:2%;
-    line-height:150%;
+    line-height:200%;
 }
 
 ol{
     font-size:1.5em;
-    line-height:150%;
+    line-height:200%;
     margin-left:2%;
 }
 
@@ -163,6 +163,8 @@ a {
 div.rightSide ul{
     font-size:inherit;
     text-align:left;  
+    line-height:150%;
+    margin-left:.5%;
 }
 
 table{

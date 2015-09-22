@@ -1,6 +1,6 @@
 body{
     background-color:#F0F0F0;
-    margin:2%;
+    margin:1%;
     font-size:larger;
 }
 
@@ -78,7 +78,6 @@ footer{
     padding:0%;
     background-color:silver;
     border-top-width:0;
-    box-shadow:10px 10px 5px #444444;
     clear:both;
 }
 
@@ -90,8 +89,7 @@ footer{
 
 div.main{
     float:left;
-    width:71%;
-    padding-right:1%;
+    width:72.85%;
     border-right:1px solid #610000;
 }
 
@@ -164,7 +162,6 @@ div.rightSide ul{
     font-size:inherit;
     text-align:left;  
     line-height:150%;
-    margin-left:.5%;
 }
 
 table{

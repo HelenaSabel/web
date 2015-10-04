@@ -6,23 +6,124 @@
         <meta charset="utf-8" />
         <link href="css/hd.css" rel="stylesheet" type="text/css" />
         <script src="javascript/lingua.js" type="text/javascript">/**/</script>
+        <script src="javascript/tooltip.js" type="text/javascript">/**/</script>
         <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
     </head>
     <body>
         <div class="body">
-            <div id="menu"><p class="pt">Congresso de Humanidades Digitais em Portugal</p><p class="sp">HDH2015: II Congreso Internacional</p></div>
+            <div id="menu"><p class="pt">Congresso de Humanidades Digitais em Portugal</p><p
+                    class="sp">HDH2015: II Congreso Internacional</p></div>
             <div class="banner"><img src="images/banner-ms.jpg" alt="banner" /></div>
             <div class="container">
-                <h1 class="pt sp">Metodolog<span class="pt">i</span><span class="sp">í</span>a</h1>
-                <ul class="sp">
-                    <li>Transcripción paleográfica (formato: texto plano).</li>
-                    <li>Auto-etiquetado usando expresiones regulares.</li>
-                    <li>XSLT: colación, signo a signo (formato: <span class="clickable">TEI Parallel segmentation method</span>).
-<pre></pre></li>
-                </ul>
+                <div class="main"><h1 class="sp">Metodología</h1>
+                <h1 class="pt">Metodologia</h1>
+                <ul>
+                    <li><span class="sp">Input: transcripción paleográfica (texto
+                            plano).</span><span class="pt">Input: transcrição paleográfica (plain
+                            text).</span></li>
+                    <li><span class="sp">Auto-etiquetado usando expresiones regulares.</span><span
+                            class="pt">Auto-etiquetagem usando expressões regulares.</span></li>
+                    <li class="code"><span class="sp">XSLT: colación, signo a signo  (output: TEI
+                        Parallel segmentation method).</span><span class="pt">XSLT: colação,
+                            signo a signo (output: TEI
+                            Parallel segmentation method).</span><div class="hide">
+                            <pre>&lt;div type="poem" corresp="#A53B165"&gt;
+    &lt;head&gt;
+        &lt;title&gt;
+            &lt;app&gt;
+                &lt;rdg wit="#A" hand="#&#945;"&gt;
+                    &lt;idno&gt;A53&lt;/idno&gt;
+                    &lt;locus from="13r" to="13r"/&gt;
+                &lt;/rdg&gt;
+                &lt;rdg wit="#B" hand="#d"&gt;
+                    &lt;idno&gt;B165&lt;/idno&gt;
+                    &lt;locus from="42r" to="42v"/&gt;
+                &lt;/rdg&gt;
+            &lt;/app&gt;
+        &lt;/title&gt;
+        &lt;name role="author" ref="#MartSrz"/&gt;
+    &lt;/head&gt;
+    &lt;l n="1"&gt;
+        &lt;app&gt;
+            &lt;rdg wit="#A #B"&gt;De tal&lt;/rdg&gt;
+        &lt;/app&gt;
+        &lt;app&gt;
+            &lt;rdg wit="#A"&gt;guissa&lt;/rdg&gt;
+            &lt;rdg wit="#B"&gt;guisa&lt;/rdg&gt;
+        &lt;/app&gt;
+        &lt;app&gt;
+            &lt;rdg wit="#A"&gt;me&lt;/rdg&gt;
+            &lt;rdg wit="#B"&gt;mj&lt;/rdg&gt;
+        &lt;/app&gt;
+        &lt;app&gt;
+            &lt;rdg wit="#A"&gt;uen&lt;/rdg&gt;
+            &lt;rdg wit="#B"&gt;ue&lt;ex&gt;n&lt;/ex&gt;&lt;/rdg&gt;
+        &lt;/app&gt;
+        &lt;app&gt;
+            &lt;rdg wit="#A"&gt;gran&lt;/rdg&gt;
+            &lt;rdg wit="#B"&gt;gra&lt;ex&gt;n&lt;/ex&gt;&lt;/rdg&gt;
+        &lt;/app&gt;
+        &lt;app&gt;
+            &lt;rdg wit="#A #B"&gt;mal&lt;/rdg&gt;
+        &lt;/app&gt;
+    &lt;/l&gt;</pre></div></li>
+                    <li class="code"><span class="sp">Categorización de variantes y descripción (TEI
+                            Feature Structures module).</span><span class="pt">Categorização de
+                            variantes e descrição (TEI Feature Structures module).</span><div
+                            class="hide"
+                            ><pre>&lt;fs xml:id="annas" feats="#anal #nasal #phon #ling" n="Nasalization due to analogy"/&gt;
+&lt;fs xml:id="denas" feats="#deNas #nasal #phon #ling" n="Denasalization"/&gt;             
+&lt;fs xml:id="pronas" feats="#proNas #nasal #phon #ling" n="Progressive nasalization"/&gt;</pre></div>
+                    </li>
+                    <li class="code"><span class="sp">Identificación de las variantes en los
+                            textos.</span><span class="pt">Identificação das variantes no corpus de
+                            cantigas.</span><div class="hide">
+                            <pre>&lt;l n="1"&gt;
+    &lt;app&gt;
+        &lt;rdg wit="#A #B"&gt;De tal&lt;/rdg&gt;
+    &lt;/app&gt;
+    &lt;app&gt;
+        &lt;rdg wit="#A" <strong>ana="#conf-sib"</strong>&gt;guissa&lt;/rdg&gt;
+        &lt;rdg wit="#B"&gt;guisa&lt;/rdg&gt;
+    &lt;/app&gt;
+    &lt;app&gt;
+        &lt;rdg wit="#A"&gt;me&lt;/rdg&gt;
+        &lt;rdg wit="#B"<strong> ana="#dat"</strong>&gt;mj&lt;/rdg&gt;
+    &lt;/app&gt;
+    &lt;app&gt;
+        &lt;rdg wit="#A"&gt;uen&lt;/rdg&gt;
+        &lt;rdg wit="#B"<strong> ana="#abb"</strong>&gt;ue&lt;ex&gt;n&lt;/ex&gt;&lt;/rdg&gt;
+    &lt;/app&gt;
+    &lt;app&gt;
+        &lt;rdg wit="#A"&gt;gran&lt;/rdg&gt;
+        &lt;rdg wit="#B"<strong> ana="#abb"</strong>&gt;gra&lt;ex&gt;n&lt;/ex&gt;&lt;/rdg&gt;
+    &lt;/app&gt;
+    &lt;app&gt;
+        &lt;rdg wit="#A #B"&gt;mal&lt;/rdg&gt;
+    &lt;/app&gt;
+&lt;/l&gt;</pre>
+                        </div></li>
+                    <li><span class="sp">Extracción de resultados y presentación
+                        (XQuery).</span><span class="pt">Extração de resutados e apresentação (XQuery).</span><ul>
+                            <li class="code">Gráficos<br /><div class="hide">
+                                    <img src="images/graficos.png" />
+                                </div></li>
+                            <li class="code">Índice de resultados<br /><div class="hide"><img
+                                        src="images/tabela.png" /></div></li>
+                        </ul>
+                    </li>
+                </ul></div>
+                <aside>
+                    <p>Introduzir imagem wordle</p>
+                </aside>
             </div>
         </div>
+        <a href="conclusao.xhtml"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="92"
+                style="float:right;">
+                <polygon points="1,70 50,45 1,20" style="fill:#8b0000;stroke:#737373;stroke-width:1"
+                ></polygon>
+            </svg></a>
     </body>
 </html>

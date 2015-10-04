@@ -4,7 +4,7 @@ body{
     font-size:larger;
 }
 
-pre {
+.hide {
     display:none;
 }
 
@@ -101,6 +101,7 @@ div.main{
     padding-right:1%;
     border-right:1px solid #610000;
 }
+
 
 .container h1{
     font-weight:bold;

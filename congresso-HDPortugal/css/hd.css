@@ -1,11 +1,23 @@
 body{
-    background-color:#F0F0F0;
-    margin:2%;
+    background-color:white;
+    margin:0.5%;
     font-size:larger;
 }
 
 .hide{
     display:none;
+}
+
+.text {
+    color:#D74141;
+}
+
+strong {
+    color:#F18B60;
+}
+
+.red {
+    color:darkred;
 }
 
 header{
@@ -23,8 +35,9 @@ h2{
 
 body.homepage{
     background-image:url('../images/portada.jpg');
-    display:-webkit-flex;
+    -webkit-display:flex;
     display:flex;
+    -webkit-flex-direction:column;
     flex-direction:column;
     -webkit-align-items:center;
     align-items:center;
@@ -46,12 +59,15 @@ footer{
     margin-top:1em;
     display:flex;
     background-color:white;
-    justify-content:space-around;
+    align-items:center;
+    padding:2%;
+    padding-right:6%;
 }
 
 footer > img{
-    margin-left:1%;
-    margin-right:1%;
+    margin-left:2%;
+    margin-right:2%;
+    flex-grow:1;
 }
 
 .transbox h2{
@@ -83,9 +99,8 @@ footer > img{
     border-radius:7px;
     border:1px solid #610000;
     padding:0%;
-    background-color:silver;
+    background-color:#F0F0F0;
     border-top-width:0;
-    box-shadow:10px 10px 5px #444444;
     clear:both;
 }
 
@@ -108,7 +123,7 @@ aside{
 }
 
 .wordle{
-    background-color:white;
+    /*background-color:white;*/
     padding-right:0.3%;
 }
 

@@ -1,4 +1,4 @@
-"use strict";
+
 
 function init() {
     var gs = document.getElementsByClassName("code");
@@ -21,10 +21,10 @@ function popup(e) {
         var random = "n" + Math.random();
         
         this.id = random;
-        var contents = this.childNodes[2].innerHTML;
+        var contents = this.childNodes[1].innerHTML;
         /*var contents = this.getElementsByClassName("hide").innerHTML;*/
-        overlay.innerHTML = contents
-        overlay.style.backgroundColor = "black";
+        overlay.innerHTML = contents;
+        overlay.style.backgroundColor = "#404040";
         overlay.style.position = "absolute";
         overlay.style.left = Xpos + "px";
         overlay.style.top = Ypos + "px";
@@ -48,3 +48,4 @@ function destroy() {
 }
 
 window.onload = init;
+

@@ -200,7 +200,7 @@ h3.inicio{
 
 h4.inicio{
     color:darkred;
-    text-align:justify;
+    text-align:center;
 }
 
 
@@ -285,7 +285,7 @@ h2{
 h3{
     text-align:center;
     font-weight:bold;
-    color:darkred;
+    color:#F5F5F5;
     background-color:DimGray;
 }
 

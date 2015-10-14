@@ -1,4 +1,4 @@
-/* An important part of the code was copied of lgToggle.js by David J. Birnbaum at http://repertorium.obdurodon.org */
+/* Most of the code was copied from lgToggle.js by David J. Birnbaum at http://repertorium.obdurodon.org */
 
 
 function createCookie(name, value, days) {

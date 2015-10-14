@@ -5,25 +5,92 @@
         <title>Sobre mim</title>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link href="CSS/index.css" rel="stylesheet" type="text/css" />
+        <link href="css/index.css" rel="stylesheet" type="text/css" />
         <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript">/**/</script>
-        <script src="JavaScript/menu.js" type="text/javascript">/**/</script>
-        <script src="JavaScript/language.js" type="text/javascript">/**/</script>
-        <!--#include virtual="SSI/favicon.html"-->
+        <script src="menu.js" type="text/javascript">/**/</script>
+        <script src="sidebar.js" type="text/javascript">/**/</script>
+        <script src="language.js" type="text/javascript">/**/</script>        
+        <script src="http://bigspotteddog.github.io/ScrollToFixed/jquery-scrolltofixed.js" type="text/javascript">/**/</script>
+        <!--#include virtual="ssi/favicon.html"-->
     </head>
     <body>
-        <!--#include virtual="SSI/initials.html" -->
+        <div class="capital">
+            <a class="tooltip"><span class="initial" id="en"><img src="images/E.png" alt="e" /></span><span class="title">English version</span></a>
+            <a class="tooltip"><span class="initial" id="gl"><img src="images/P.png" alt="g" /></span><span class="title">Versão em português</span></a>
+        </div>
         <div class="body">
-            <!--#include virtual="SSI/menu.html" -->
+            <div id="menu">
+                <ul class="menu gl">
+                    <li>
+                        <a href="about.xhtml" class="has-sub">Início</a>
+                        <ul class="dropdown">
+                            <li>
+                                <a href="about.xhtml#investigaçom">Investigaçom</a>
+                            </li>
+                            <li>
+                                <a href="about.xhtml#cv">Breve CV</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="maps.xhtml">Cartografia</a>
+                    </li>
+                    <li>
+                        <a href="network.xhtml">Redes sociais</a>
+                    </li>
+                    <li>
+                        <a class="has-sub">Lingüística histórica</a>
+                        <ul class="dropdown">
+                            <li><a href="linguistic.xhtml">Metodologia</a></li>
+                            <li><a href="cantigas.xhtml">Textos</a></li>
+                            <li><a href="results.xhtml">Resultados</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="recursos.xhtml">Recursos</a>
+                    </li>
+                </ul>
+                <ul class="menu en">
+                    <li>
+                        <a href="about.xhtml" class="has-sub">About</a>
+                        <ul class="dropdown">
+                            <li>
+                                <a href="about.xhtml#research">Research</a>
+                            </li>
+                            <li>
+                                <a href="about.xhtml#CV">Brief CV</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="maps.xhtml">Maps</a>
+                    </li>
+                    <li>
+                        <a href="network.xhtml">Social Network</a>
+                    </li>
+                    <li>
+                        <a class="has-sub">Historical Linguistics</a>
+                        <ul class="dropdown">
+                            <li><a href="linguistic.xhtml">Methodology</a></li>
+                            <li><a href="cantigas.xhtml">Texts</a></li>                                    
+                            <li><a href="results.xhtml">Results</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="recursos.xhtml">Resources</a>
+                    </li>
+                </ul>
+            </div>
+            
             <div class="banner"><img src="images/banner_owl.png" alt="banner" /></div>
             <div class="container">
                 <div class="main gl">
-                    <h2>Apresentaçom</h2>
-                    <p>Som Helena, investigadora em Formaçom e Aperfeiçoamento na Univesidade de
+                    <h2>Apresentação</h2>
+                    <p>Som Helena, investigadora em Formação e Aperfeiçoamento na Univesidade de
                         Santiago de Compostela. A finalidade desta web é a de juntar num mesmo
                         espaço diversos materiais que vou realizando sobre o fenómeno cultural da
                         lírica galego-portuguesa.</p>
-                    <p>Por umha parte, esta página albergará informaçom de teor lingüístico
+                    <p>Por umha parte, esta página albergará informação de teor lingüístico
                         conformada por materiais fruto do meu projeto de tese de doutoramento <em>A
                             lirica profana galego-portuguesa: entre filologia e história da
                             língua</em> dirigida polas professoras <a
@@ -38,21 +105,21 @@
                             href="http://www.academia.edu/2627227/Os_cavaleiros_que_fizeram_as_cantigas._Aproxima%C3%A7%C3%A3o_%C3%A0s_origens_socioculturais_da_l%C3%ADrica_galego-portuguesa"
                             target="_blank"><em>Os cavaleiros que fizeram as cantigas. Aproximação
                                 às origens socioculturais da lírica galego-portuguesa</em></a>,
-                        quero trabalhar em propostas de visualizaçom alternativas às tradicionais
-                        táboas genealógicas, pois a sua rígida disposiçom imposibilita ver relaçons
+                        quero trabalhar em propostas de visualização alternativas às tradicionais
+                        táboas genealógicas, pois a sua rígida disposição imposibilita ver relaçons
                         transversais entre membros/as de várias famílias dumha maneira
                         intuitiva.</p>
-                    <p>Por último, estou numha fase incipiente de colaboraçom com o grupo de
-                        investigaçom que coordina a base de dados <a
+                    <p>Por último, estou numha fase incipiente de colaboração com o grupo de
+                        investigação que coordina a base de dados <a
                             href="http://www.cirp.es/pls/bdo2/f?p=MEDDB2">MedDB: Base de datos da
                             Lírica Profana Galego-Portuguesa</a> do Centro de Investigación en
                         Humanidades Ramón Piñeiro. Poderás encontrar aqui os rascunhos das
                         visualizaçons cartográficas que estou a elaborar para esse projeto.</p>
                     <p>Se queres saber mais sobre mim, convido-te a dar umha vista de olhos ao meu
                                 <em><a href="#cv">curriculum</a></em>.</p>
-                    <h2 id="investigaçom">Investigaçom</h2>
-                    <p>A finalidade da minha tese é a elaboraçom dum estudo que analize
-                        rigorosamente, servindo-se dumha metodologia filológica, a variaçom
+                    <h2 id="investigação">Investigação</h2>
+                    <p>A finalidade da minha tese é a elaboração dum estudo que analize
+                        rigorosamente, servindo-se dumha metodologia filológica, a variação
                         lingüística que se documenta nos três grandes códices que enviam a lírica
                         medieval galego-portuguesa: o <em>Cancioneiro da Ajuda</em> (<em>A</em>), o
                             <em>Cancioneiro da Biblioteca Nacional de Lisboa (<em>B</em>)</em> e o
@@ -60,22 +127,22 @@
                         fragmentos menores (o <em>Pergaminho Vindel</em> (<em>N</em>), o
                             <em>Pergaminho Sharrer</em> (<em>T</em>), a <em>folha de Madrid</em>
                             (<em>M</em>) e as <em>folhas do Porto</em> (<em>P</em>)).</p>
-                    <p>Este projeto marca-se como objetivo a preparaçom dumha ediçom digital mui
+                    <p>Este projeto marca-se como objetivo a preparação dumha edição digital mui
                         concreta, que permita obter um melhor conhecimento da transmissom manuscrita
                         da lírica galego-portuguesa. Para isso, depois dumha <em>collatio</em>
-                        informatizada em que se etiquetam todos os fenómenos de variaçom textual,
-                        procederá-se à extraçom de aqueles dados que se considerarem relevantes;
-                        poderemos, assim, organizar a informaçom disponível e proceder ao estudo da
-                        variaçom en todas as suas vertentes, prestando umha maior atençom às de
-                        corte lingüístico. Para mais informaçom visita a seçom de <a
+                        informatizada em que se etiquetam todos os fenómenos de variação textual,
+                        procederá-se à extração de aqueles dados que se considerarem relevantes;
+                        poderemos, assim, organizar a informação disponível e proceder ao estudo da
+                        variação en todas as suas vertentes, prestando umha maior atenção às de
+                        corte lingüístico. Para mais informação visita a seção de <a
                             href="linguistic.xhtml">Estudos Lingüísticos</a>.</p>
                     <p>Apresentarei brevemente os diversos projetos de mapeamento que estou a
                         fazer.</p>
                     <p>Falarei sobre o interesse de conhermos as relaçons sociais entre produtores e
-                        mecenas, e apresentarei algumhas das minhas propostas de visualizaçom das
+                        mecenas, e apresentarei algumhas das minhas propostas de visualização das
                         mesmas. Agradecimentos a Elisa Beshero-Bondar.</p>
                     <h2 id="cv">Breve <em>Curriculum Vitae</em></h2>
-                    <h3>Formaçom académica</h3>
+                    <h3>Formação académica</h3>
                     <ul>
                         <li><strong>Licenciada en Filoloxía Románica</strong> (2011) – USC</li>
                         <li><strong>Licenciada en Filoloxía Portuguesa</strong> (2014) – USC</li>
@@ -84,7 +151,7 @@
                         <li><strong>Programa Oficial de Doutoramento en Estudos Medievais</strong>
                             (estudos iniciados en outubro de 2012) – USC</li>
                     </ul>
-                    <h3>Formaçom ténica e especializada</h3>
+                    <h3>Formação ténica e especializada</h3>
                     <ul>
                         <li><strong><em>Computational Methods in the Humanities</em></strong> (2014)
                             - University of Pittsburgh (Pittsburgh, EUA).</li>
@@ -96,11 +163,35 @@
                     </ul>
                     <h3>Experiência docente</h3>
                     <ul>
-                        <li>G5081450 - <strong>Crítica textual románica</strong> (Maior en Filoloxía
-                            Románica) - Curso 2014/2015</li>
+                        <li>G5081245 - <a
+                                href="https://www.usc.es/gl/centros/filoloxia/materia.html?materia=95995&amp;ano=66"
+                                target="_blank"><strong>Novas tecnoloxías nos estudos lingüísticos e
+                                    literarios románicos</strong></a> (Maior en Filologia Românica)
+                            - Ano 2015/2016</li>
+                        <li>G5081447 - <a
+                                href="http://https://www.usc.es/gl/departamentos/flgaleg/materia.html?materia=96070"
+                                target="_blank"><strong>A transmisión dos textos
+                                románicos</strong></a> (Maior en Filologia Românica)- Ano
+                            2015/2016</li>
+                        <li>G5081450 - <a
+                                href="http://www.usc.es/opencms/es/centros/filoloxia/materia.html?materia=85509&amp;ano=65"
+                                    ><strong>Crítica textual románica</strong></a> (Maior en
+                            Filología Románica) - Ano 2014/2015</li>
                     </ul>
-                    <h3>Participaçom em congressos internacionais</h3>
+                    <h3>Participação em congressos internacionais</h3>
                     <ul>
+                        <li>“<em>Collatio</em> informatizada e marcação - <em>Congresso de
+                                Humanidades Digitais em Portugal</em> (Lisboa-Portugal 2015).</li>
+                        <li>“Colación interlineal aplicada al estudio de la variación lingüística en
+                            la lírica gallego-portuguesa” - <em>II Congreso Internacional de la
+                                Asociación Hispánica de Humanidades Digitales</em> (Madrid-Espanha,
+                            2015)</li>
+                        <li>“Aproximação à língua dos cancioneiros galego-portugueses. Um estudo
+                            sobre a variação linguística” - <em>XVI Congresso Internacional da
+                                Associação Hispânica de Literatura Medieval</em> (AHLM,
+                            Porto-Portugal, 2015)</li>
+                        <li>“Using Feature Structures for the study of medieval manuscripts” -
+                                <em>DH2015</em> (ADHO, Sydney-Australia, 2015).</li>
                         <li>“Linguistic variation and manuscript transmission. A case study using
                             XML/TEI” - <em>El’Manuscript-14</em> (Textual Heritage and Information
                             Technologies, Varna-Bulgaria, 2014).</li>
@@ -127,7 +218,7 @@
                                 target="_blank"> A edición sinóptica e a súa aplicación ao estudo da
                                 variación lingüística na lírica galego-portuguesa</a></li>
                     </ul>
-                    <h3>Participaçom em Projetos de I+D+i</h3>
+                    <h3>Participação em Projetos de I+D+i</h3>
                     <ul>
                         <li><a
                                 href="http://www.usc.es/filrom/projects/estudos-medievais-interdisciplinares"
@@ -195,8 +286,8 @@
                         the role of culture in maintaing the social order. As a result, I intend to
                         analyze the relatioships between cultural producers and centers of power
                         through the plotting of social networks and geospatial maps.</p>
-                    <p>Talk about visualization alternatives to depict transversal relationships between
-                        lordship families during the Middle Age.</p>
+                    <p>Talk about visualization alternatives to depict transversal relationships
+                        between lordship families during the Middle Age.</p>
                     <p>Explain my coloboration with the <a
                             href="http://www.cirp.es/pls/bdo2/f?p=MEDDB2">MedDB: Base de datos da
                             Lírica Profana Galego-Portuguesa</a> and the mapping I do for them.</p>
@@ -207,12 +298,12 @@
                             href="http://www.academia.edu/2627227/Os_cavaleiros_que_fizeram_as_cantigas._Aproxima%C3%A7%C3%A3o_%C3%A0s_origens_socioculturais_da_l%C3%ADrica_galego-portuguesa"
                             target="_blank"><em>Os cavaleiros que fizeram as cantigas. Aproximação
                                 às origens socioculturais da lírica galego-portuguesa</em></a>,
-                        quero trabalhar em propostas de visualizaçom alternativas às tradicionais
-                        táboas genealógicas, pois a sua rígida disposiçom imposibilita ver relaçons
+                        quero trabalhar em propostas de visualização alternativas às tradicionais
+                        táboas genealógicas, pois a sua rígida disposição imposibilita ver relaçons
                         transversais entre membros/as de várias famílias dumha maneira
                         intuitiva.</p>
-                    <p>Por último, estou numha fase incipiente de colaboraçom com o grupo de
-                        investigaçom que coordina a base de dados <a
+                    <p>Por último, estou numha fase incipiente de colaboração com o grupo de
+                        investigação que coordina a base de dados <a
                             href="http://www.cirp.es/pls/bdo2/f?p=MEDDB2">MedDB: Base de datos da
                             Lírica Profana Galego-Portuguesa</a> do Centro de Investigación en
                         Humanidades Ramón Piñeiro. Poderás encontrar aqui os rascunhos das
@@ -234,15 +325,16 @@
                             target="_blank">Feature Structures module</a>. This markup allows us to
                         create a no-SQL database with systematic exploration, hence providing
                         valuable information about the copyists’ origin and the scriptoria involved,
-                        as well as about the identification of the filiations between the sources.</p>
+                        as well as about the identification of the filiations between the
+                        sources.</p>
                     <p style="margin-top:1%">Network analysis</p>
                     <p style="margin-top:1%">Mapping</p>
-                    <!--<p>Aqui explicarei de que vai a minha tese, com umha ligaçom para a seçom de <a
+                    <!--<p>Aqui explicarei de que vai a minha tese, com umha ligação para a seção de <a
                             href="linguistic.xhtml">Estudos Lingüísticos</a>.</p>
                     <p>Apresentarei brevemente os diversos projetos de mapeamento que estou a
                         fazer.</p>
                     <p>Falarei sobre o interesse de conhermos as relaçons sociais entre produtores e
-                        mecenas, e apresentarei algumhas das minhas propostas de visualizaçom das
+                        mecenas, e apresentarei algumhas das minhas propostas de visualização das
                         mesmas. Agradecimentos a Elisa Beshero-Bondar.</p>-->
                     <h2 id="CV">Brief <em>Curriculum Vitae</em></h2>
                     <h3>Academic education</h3>
@@ -268,7 +360,8 @@
                     </ul>
                     <h3>Teaching experience</h3>
                     <ul>
-                        <li>G5081450 - <strong>Textual Criticism</strong> (Major in Romance Philology) - Academic year 2014/2015</li>
+                        <li>G5081450 - <strong>Textual Criticism</strong> (Major in Romance
+                            Philology) - Academic year 2014/2015</li>
                     </ul>
                     <h3>Contributions to conferences</h3>
                     <ul>
@@ -344,31 +437,34 @@
                         </li>
                     </ul>
                 </div>
-                <div class="rightSide gl">
-                    <h3>Outra info</h3>
-                    <p><strong>Cargo:</strong> Investigadora em Formaçom e Aperfeiçoamento (FPU)</p>
-                    <p><strong>Grupo Investigaçom:</strong>
-                        <a href="http://www.usc.es/filrom">GI-1350 Románicas (Filologia, Literatura
-                            medieval)</a></p>
-                    <p><strong>Gabinete:</strong> B15, Faculdade de Filologia (USC)</p>
-                    <p><strong>Telefone:</strong> +34 8818 11974 (ext.)</p>
-                    <p><strong>E-mail:</strong> helena.bermudez@usc.es</p>
-                    <div class="imageRight"><img class="rightSide" alt="leom" src="images/leom.jpg"
-                         /></div>
-                </div>
-                <div class="rightSide en">
-                    <h3>Other info</h3>
-                    <p><strong>Position:</strong> PhD Candidate - FPU Researcher</p>
-                    <p><strong>Research Group:</strong>
-                        <a href="http://www.usc.es/filrom/?lang=en">GI-1350 Romance
-                        Philology</a></p>
-                    <p><strong>Office:</strong> B15, Faculdade de Filologia (USC)</p>
-                    <p><strong>Phone:</strong> +34 8818 11974 (ext.)</p>
-                    <p><strong>E-mail:</strong> helena.bermudez@usc.es</p>
-                    <div class="imageRight"><img class="rightSide" alt="leom" src="images/leom.jpg"
-                         /></div>
+                <div class="rightSide" id="move">
+                    <div class="gl">
+                        <h3>Outra info</h3>
+                        <p><strong>Cargo:</strong> Investigadora em Formação e Aperfeiçoamento
+                            (FPU)</p>
+                        <p><strong>Grupo Investigação:</strong>
+                            <a href="http://www.usc.es/filrom">GI-1350 Románicas (Filologia,
+                                Literatura medieval)</a></p>
+                        <p><strong>Gabinete:</strong> B15, Faculdade de Filologia (USC)</p>
+                        <p><strong>Telefone:</strong> +34 8818 11974 (ext.)</p>
+                        <p><strong>E-mail:</strong> helena.bermudez@usc.es</p>
+                        <div class="imageRight"><img class="rightSide" alt="leom"
+                                src="images/leom.jpg" /></div>
+                    </div>
+                    <div class="en">
+                        <h3>Other info</h3>
+                        <p><strong>Position:</strong> PhD Candidate - FPU Researcher</p>
+                        <p><strong>Research Group:</strong>
+                            <a href="http://www.usc.es/filrom/?lang=en">GI-1350 Romance
+                                Philology</a></p>
+                        <p><strong>Office:</strong> B15, Faculdade de Filologia (USC)</p>
+                        <p><strong>Phone:</strong> +34 8818 11974 (ext.)</p>
+                        <p><strong>E-mail:</strong> helena.bermudez@usc.es</p>
+                        <div class="imageRight"><img class="rightSide" alt="leom"
+                                src="images/leom.jpg" /></div></div>
                 </div>
             </div>
+        <div id="footer"></div>
         </div>
     </body>
 </html>

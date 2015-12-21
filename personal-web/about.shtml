@@ -11,16 +11,17 @@
         <script src="sidebar.js" type="text/javascript">/**/</script>
         <script src="language.js" type="text/javascript">/**/</script>        
         <script src="http://bigspotteddog.github.io/ScrollToFixed/jquery-scrolltofixed.js" type="text/javascript">/**/</script>
-        <!--#include virtual="ssi/favicon.html"-->
+        <!--#include virtual="favicon.html"-->
     </head>
     <body>
-        <!--#include virtual="ssi/initials.html"-->
+        <!--#include virtual="initials.html"-->
         <div class="body">
-            <!--#include virtual="ssi/menu.html"-->
+            <!--#include virtual="menu.html"-->
             <div class="banner"><img src="images/banner_owl.png" alt="banner" /></div>
             <div class="container">
                 <div class="main gl">
                     <h2>Apresentação</h2>
+                    <!--#config timefmt="%x" --><!--#echo var="DATE_LOCAL" -->
                     <p>Som Helena, investigadora em Formação e Aperfeiçoamento na Univesidade de
                         Santiago de Compostela. A finalidade desta web é a de juntar num mesmo
                         espaço diversos materiais que vou realizando sobre o fenómeno cultural da

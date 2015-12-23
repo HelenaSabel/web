@@ -127,7 +127,7 @@ div.background:hover{
     opacity:0.9;
 }
 
-div.menu{
+menu.inicio{
     margin-top:0.5%;
     clear:both;
     background-color:#8b0000;
@@ -142,13 +142,13 @@ div.transbox{
 }
 
 
-div.menu ul.menu {
+menu.inicio ul.menu {
     padding-right:2%;
     padding-left:2%;
 }
 
 
-div#menu{
+menu{
     margin-top:0;
     background-color:#8b0000;
     border-top:0px solid #8b0000;

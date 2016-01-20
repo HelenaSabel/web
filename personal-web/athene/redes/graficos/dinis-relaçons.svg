@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Dom Dinis</title>
-        <meta charset="utf-8" />
-        <link rel="shortcut icon" type="image/png" href="images/favicon-16x16.png" />
-        <style>
-            html{
-                background-color: black;
-            }</style>
-    </head>
-    <body>
-        <div id="container">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -22,8 +10,8 @@
    version="1.1"
    x="0px"
    y="0px"
-   width="auto"
-   height="100%"
+   width="1078"
+   height="649"
    viewBox="0 0 1078 649"
    id="svg9028"
    inkscape:version="0.48.4 r9939"
@@ -1106,6 +1094,3 @@
 </svg>
 <!-- bounding box -->
 
-
-    </div></body>
-</html>

@@ -69,25 +69,21 @@ div.banner{
 }
 
 .contentor{
-    /*display:-webkit-flex;
+    display:-webkit-flex;
     -webkit-justify-content:center;
-    -webkit-align-items:center;*/
+    -webkit-align-items:center;
     display:flex;
     justify-content:center;
     align-items:center;
     width:99%;
 }
-.right{
-    /*display:-webkit-flex;
-    display:flex;*/
-}
+
 
 .right .capital{
-   display:flex;
-   
+    display:flex;
     flex-direction:column;
-    /* display:-webkit-flex;
-    -webkit-flex-direction:column;*/
+    display:-webkit-flex;
+    -webkit-flex-direction:column;
     float:none;
 }
 
@@ -113,11 +109,9 @@ div.background{
     opacity:1;
     background-image:url('../images/macaco.jpg');
     height:438px;
-    /*display:-webkit-flex;*/
+    display:-webkit-flex;
     display:flex;
-    /*-webkit-align-items:center;*/
     align-items:center;
-    /*-webkit-justify-content:center;*/
     justify-content:center;
     clear:both;
 }

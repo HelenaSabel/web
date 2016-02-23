@@ -1,0 +1,123 @@
+
+@font-face{
+    font-family: englishGothic;
+    src: url('../fonts/english.ttf');
+}
+
+.capital{
+    font-family: englishGothic;
+}
+
+.indent{
+    padding-left: 4%;
+}
+
+html{
+    margin: 1% 2% 2%;
+    background-color: #b5b0aa;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+header{
+    background-color: #b34629;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0%;
+}
+
+header h2{
+    color: #490301;
+    font-size: 250%;
+    width: 25%;
+    margin: 0;
+}
+
+header h1{
+    color: #FFAC2E;
+    font-size: 400%;
+    padding: 1%;
+    padding-left: 4%;
+    margin: 0;
+    width: 55%;
+}
+
+header img{
+    width: 15%;
+}
+
+body{
+    background-color: #eeebc2;
+    color: #32281b;
+    padding-bottom:3%;
+}
+
+menu{
+    margin-top: 0;
+    background-color: #2b3966;
+    font-size: 1.5em;
+}
+
+menu ul{
+    margin-bottom: 0%;
+    white-space: nowrap;
+}
+
+menu > ul > li{
+    float: none;
+    position: relative;
+    list-style: none;
+    display: inline-block;
+}
+
+menu ul ul{
+    background-color: #393649;
+    display: none;
+    position: absolute;
+    left: 0;
+    white-space: nowrap;
+    top: 100%;
+
+}
+
+menu a{
+    cursor: pointer;
+    display: block;
+    color: #B28D28;
+    font-weight: bold;
+    padding: 0 15px 5px;
+    text-decoration: none;
+}
+
+menu li:hover{
+    background-color: #393649;
+}
+
+menu li li:hover{
+    background-color: #282633;
+}
+
+menu li:hover ul{
+    display: block;
+}
+
+ul.dropdown {
+    padding-left:0;
+}
+ul.dropdown li{
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    white-space: nowrap;
+}
+
+ul.dropdown a{
+    font-weight: normal;
+}
+
+h1{
+    color: #697575;
+}
+
+main{
+    margin: 2%;
+}

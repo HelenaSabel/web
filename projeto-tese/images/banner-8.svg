@@ -251,11 +251,15 @@
          y="1132.0914"
          x="88.899132"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32.59991455px;line-height:125%;font-family:'TeX Gyre Schola';-inkscape-font-specification:'TeX Gyre Schola, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#f2f2af;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-         xml:space="preserve"><tspan
+         xml:space="preserve"><tspan class="pt"
            y="1132.0914"
            x="88.899132"
            id="tspan5334"
-           sodipodi:role="line">Um estudo sobre variação linguística e transmissão manuscrita</tspan></text>
+           sodipodi:role="line">Um estudo sobre variação linguística e transmissão manuscrita</tspan>
+      <tspan class="en" y="1132.0914"
+           x="88.899132"
+           id="tspan5334"
+           sodipodi:role="line">A study on linguistic variation and manuscript transmission</tspan></text>
     </g>
     <image
        y="852.17828"

@@ -1,7 +1,7 @@
 
 
 html{
-    margin: 1% 2% 2%;
+    margin: 1% 3% 3%;
     background-color: #b5b0aa;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
@@ -9,6 +9,10 @@ html{
 header{
     margin: 0;
     padding:0;
+    height:auto;
+    width:100%;
+    background-color:#2b3966;
+    min-width:750px;
 }
 
 header svg {
@@ -25,6 +29,9 @@ menu{
     margin-top: 0;
     background-color: #2b3966;
     font-size: 1.5em;
+    display:flex;
+    min-width:750px;
+    justify-content:space-between;
 }
 
 menu ul{
@@ -90,4 +97,15 @@ h1{
 
 main{
     margin: 2%;
+}
+
+.languages {
+    display:inline;
+    color: #B28D28;
+    margin-right:2%;
+    font-weight:bold;
+}
+
+.languages span {
+    font-variant:small-caps;
 }

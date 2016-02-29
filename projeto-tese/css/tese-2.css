@@ -2,7 +2,7 @@
 
 html{
     margin: 1% 3% 3%;
-    background-color: #14150A;
+    background-color: #b5b0aa;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
@@ -11,7 +11,7 @@ header{
     padding:0;
     height:auto;
     width:100%;
-    background-color:#15295B;
+    background-color:#2b3966;
     min-width:750px;
 }
 
@@ -20,19 +20,18 @@ header svg {
     padding:0;
 }
 body{
-    background-color: #F3EBB4;
-    color: #343226;
+    background-color: #eeebc2;
+    color: #32281b;
     padding-bottom:3%;
 }
 
 menu{
     margin-top: 0;
-    background-color: #15295B;
+    background-color: #2b3966;
     font-size: 1.5em;
     display:flex;
     min-width:750px;
     justify-content:space-between;
-    padding-left:0;
 }
 
 menu ul{
@@ -48,7 +47,7 @@ menu > ul > li{
 }
 
 menu ul ul{
-    background-color: #154872;
+    background-color: #393649;
     display: none;
     position: absolute;
     left: 0;
@@ -60,18 +59,18 @@ menu ul ul{
 menu a{
     cursor: pointer;
     display: block;
-    color: #A77805;
+    color: #B28D28;
     font-weight: bold;
     padding: 0 15px 5px;
     text-decoration: none;
 }
 
 menu li:hover{
-    background-color: #154872;
+    background-color: #393649;
 }
 
 menu li li:hover{
-    background-color: #15295B;
+    background-color: #282633;
 }
 
 menu li:hover ul{
@@ -93,12 +92,13 @@ ul.dropdown a{
 }
 
 h1{
-    color: #490301;
+    color: #697575;
 }
 
 h2{
-    color:#8C3504;
+    color:#4b2b01;
 }
+
 main{
     margin: 2%;
 }
@@ -115,11 +115,17 @@ main{
 }
 
 a {
-    color: #BD6C03;
+    color:#bd6d03;
     text-decoration:none;
 }
 
-a:hover {
-    color:#A25303;
+@font-face{
+    font-family: butler;
+    src: url('fonts/Butler_Medium.otf')
+    }
+    
+p {
+    font-family: butler;
+    line-height:150%;
+    text-align:justify;
 }
-

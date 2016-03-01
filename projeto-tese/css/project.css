@@ -28,7 +28,7 @@ main{
 }
 
 @font-face{
-    font-family: texGyre;
+    font-family: 'TeX Gyre Schola';
     src: url('../fonts/texgyreschola-regular.otf');
 }
 
@@ -39,11 +39,12 @@ menu{
     min-width: 750px;
     justify-content: space-between;
     padding-left: 0;
-    font-family: teXGyre;
+    font-family: 'TeX Gyre Schola';
 }
 
 menu ul{
-    margin-bottom: 0%;
+    margin-top:0;
+    margin-bottom: 0;
     white-space: nowrap;
 }
 
@@ -53,7 +54,6 @@ menu > ul > li{
     list-style: none;
     display: inline-block;
     padding-right: 1.5%;
-    font-weight: 500;
     font-size: 1.5em;
 }
 

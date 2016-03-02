@@ -202,8 +202,10 @@ p{
         position: relative;
     }
     menu li.tap ul{
-        display: block;
-    }
+        display: block;        
+        background-color: inherit;
+        padding-left:4%;
+    }    
 
     body{
         margin: 0;

@@ -6,7 +6,37 @@ function init() {
 }
 
 function tap(){
-    this.classList.add('tap');
+    this.classList.toggle('tap');
+    var taps = document.getElementsByClassName('tap');
+    for (var i = 0; i <taps.length; i++) {
+        taps[i].addEventListener('click', destroy, false);
+    }
 }
 
-window.onload = init()
+function destroy() {
+    this.classList.toggle('has-sub');
+}
+
+window.onload = init
+
+
+/*function init() {
+    var lis = document.getElementsByClassName('has-sub');
+    for (var i = 0; i <lis.length; i++) {
+        lis[i].addEventListener('click', tap, false);
+    }
+}
+
+function tap(){
+    this.classList.add('tap');
+    var taps = document.getElementsByClassName('tap');
+    for (var i = 0; i <taps.length; i++) {
+        taps[i].addEventListener('click', destroy, false);
+    }
+}
+
+function destroy() {
+    this.classList.remove('tap');
+}
+
+window.onload = init*/

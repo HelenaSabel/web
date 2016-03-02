@@ -1,30 +1,25 @@
 
-html{
-    margin: 1% 3% 3%;
-    background-color: #b5b0aa;
-}
-
 header{
     margin: 0;
     padding: 0;
     height: auto;
     width: 100%;
     background-color: #2b3966;
-    min-width: 750px;
 }
 
 
 body{
-    background-color: #eeebc2;
     color: #32281b;
-    padding-bottom:2%;
-    margin-bottom: 2%;
-
+    margin: 1% 3% 3%;
+    background-color: #b5b0aa;
 }
 
 main{
+    background-color: #eae5c5;
     font-family: born;
-    font-size:115%;
+    font-size: 115%;
+    margin: 0%;
+    padding-top: 2%;
 }
 
 @font-face{
@@ -34,16 +29,16 @@ main{
 
 menu{
     margin-top: 0;
+    margin-bottom: 0;
     background-color: #2b3966;
     display: flex;
-    min-width: 750px;
     justify-content: space-between;
     padding-left: 0;
     font-family: 'TeX Gyre Schola';
 }
 
 menu ul{
-    margin-top:0;
+    margin-top: 0;
     margin-bottom: 0;
     white-space: nowrap;
 }
@@ -75,17 +70,6 @@ menu a{
     text-decoration: none;
 }
 
-menu li:hover{
-    background-color: #393649;
-}
-
-menu li li:hover{
-    background-color: #282633;
-}
-
-menu li:hover ul{
-    display: block;
-}
 
 ul.dropdown{
     padding-left: 0;
@@ -103,7 +87,7 @@ ul.dropdown a{
 }
 
 h1{
-    color: #697575;
+    color: #555137;
     margin-left: 1.65%;
 }
 
@@ -116,12 +100,8 @@ h3{
     margin-left: 1.65%;
 }
 
-main{
-    margin: 2%;
-}
 
 .languages{
-    display: inline;
     color: #FFC938;
     margin-right: 2%;
     font-weight: bold;
@@ -156,4 +136,84 @@ p{
 
 .en{
     display: none;
+}
+
+@media all and (max-width: 940px){
+    menu{
+        font-size: smaller;}
+}
+
+@media all and (max-width : 805px){
+    .languages{
+        display: inline;
+    }
+    
+    .languages span {
+        margin:0;
+        padding:0;        
+    }
+    
+    .languages a{
+        padding:0;
+    }
+    menu > ul{
+        padding-left: 0;
+    }
+    
+    menu a {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+}
+
+
+@media all and (min-width : 613px){
+    menu > ul li:hover{
+        background: #393649;
+    }
+    menu li:hover ul{
+        display: block;
+    }
+    menu li li:hover{
+        background-color: #282633;
+    }
+
+}
+
+@media all and (max-width : 612px){
+
+    menu > ul{
+        height: auto;
+    }
+    menu > ul > li{
+        float: none;
+        display: block;
+        width: 100%;
+    }
+    menu > ul a{
+        line-height: 40px;
+    }
+    
+    menu a {
+        padding-bottom:0%;
+    }
+    
+    menu > ul ul{
+        position: relative;
+    }
+    menu li.tap ul{
+        display: block;
+    }
+
+    body{
+        margin: 0;
+        font-size: smaller;
+    }
+    .languages{
+        display: flex;
+        flex-direction: column;
+    }
+    menu{
+        flex-direction:row;
+    }
 }

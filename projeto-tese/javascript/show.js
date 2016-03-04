@@ -21,22 +21,16 @@ window.onload = init*/
 
 
 
-function init() {
-    var inputs = document.getElementsByClassName('show');
-    for (var i = 0; i < inputs.length; i++) {
-        inputs[i].addEventListener('change', show, true);
+function first() {
+    var select = document.getElementsByClassName('show');
+    for (var i = 0; i < select.length; i++) {
+        select[i].addEventListener('click', show, false);
     }
 }
 
 function show() {
-    if (this.checked) {
-        this.nextElementSibling.nextElementSibling.nextElementSibling.classList.remove('hide');
-    } else {
-        this.nextElementSibling.nextElementSibling.nextElementSibling.classList.add('hide');
-    }
-
+   this.parentNode.querySelectorAll('ul')[0].classList.remove('hide');
 }
 
 
-
-window.onload = init
+ window.addEventListener('load',first,false);

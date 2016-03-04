@@ -1,4 +1,4 @@
-function init() {
+function menu() {
     var lis = document.getElementsByClassName('has-sub');
     for (var i = 0; i <lis.length; i++) {
         lis[i].addEventListener('click', tap, false);
@@ -17,5 +17,5 @@ function destroy() {
     this.classList.toggle('has-sub');
 }
 
-window.onload = init
+window.onload = menu
 

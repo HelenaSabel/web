@@ -10,16 +10,499 @@
       <script src="javascript/menu.js" type="text/javascript">/**/</script>
       <script src="javascript/show.js" type="text/javascript">/**/</script>
       <script src="javascript/language.js" type="text/javascript">/**/</script>
+      <script src="http://code.jquery.com/jquery-latest.min.js"
+              type="text/javascript">/**/</script>
+      <script src="http://bigspotteddog.github.io/ScrollToFixed/jquery-scrolltofixed.js"
+              type="text/javascript">/**/</script>
+      <script src="javascript/sidebar.js" type="text/javascript">/**/</script>
       <!--#include virtual="ssi/favicon.html"-->
    </head>
    <body><!--#include virtual="ssi/header.html"-->
       <main>
-         <section>
-            <h1 class="pt">Edição sinóptica</h1>
-            <h1 class="en">Synoptic edition</h1>
-            <div>
-               <div class="metadata pt">
-                  <h2 id="A1B91">Cantiga: A1, B91</h2>
-                  <h2>Autor: <persName xmlns="http://www.tei-c.org/ns/1.0">Vasco Fernandez Praga de Sandin</persName>
-                  </h2>
-                  <h2>Período: 
+         <h1 class="pt center">Edição sinóptica</h1>
+         <h1 class="en center">Synoptic edition</h1>
+         <div class="multiple">
+            <section>
+               <div id="A1B91" class="poem">
+                  <div class="metadata pt">
+                     <h2>Cantiga: A1, B91</h2>
+                     <h2>Autor: Vasco Fernandez Praga de Sandin</h2>
+                     <h2>Período: 1200-1240 (período 2)</h2>
+                  </div>
+                  <div class="metadata en">
+                     <h2>Song: A1, B91</h2>
+                     <h2>Author: Vasco Fernandez Praga de Sandin</h2>
+                     <h2>Period: 1200-1240 (period 2)</h2>
+                  </div>
+                  <div class="body">
+                     <div class="witness">
+                        <h3>
+                           <span class="pt">Testemunho</span>
+                           <span class="en">Witness</span>: A</h3>
+                        <h4>Text<span class="pt">o</span>: A1</h4>
+                        <h4>
+                           <span class="pt">Localização</span>
+                           <span class="en">Location</span>: 1r</h4>
+                        <h4>
+                           <span class="pt">Copista</span>
+                           <span class="en">Copyist</span>: α</h4>
+                        <ol start="1">
+                           <li>guer</li>
+                           <li>uosmetoedeste poder</li>
+                           <li>que eueidemuitouiuer</li>
+                           <li>ca mentr eu tal poderouuer</li>
+                           <li>de uiuer nuncaperderei</li>
+                           <li>estacoitaqogeuey</li>
+                           <li>d amor eno meu coraçon</li>
+                        </ol>
+                        <ol start="8">
+                           <li>Ca
+                        fazauertalmoer</li>
+                           <li>quenunca
+                        rendefazer</li>
+                           <li>perqeuia possapd</li>
+                           <li>qenquateuuiuerpoder</li>
+                           <li>poresto a nopodere</li>
+                           <li>pder prenmaisauerei</li>
+                           <li>delamaiscomuigranrazo</li>
+                        </ol>
+                        <ol start="15">
+                           <li>Ca no est ectad amor</li>
+                           <li> uaqomefillaruen</li>
+                           <li>se omeleixasenseuben</li>
+                           <li>ousenmorte ou sefazmeor</li>
+                           <li>maissemellamuitoutromal</li>
+                           <li>e quen aestactatal</li>
+                           <li>macarsemorre noepz</li>
+                        </ol>
+                     </div>
+                     <div class="witness">
+                        <h3>
+                           <span class="pt">Testemunho</span>
+                           <span class="en">Witness</span>: B</h3>
+                        <h4>Text<span class="pt">o</span>: B91</h4>
+                        <h4>
+                           <span class="pt">Localização</span>
+                           <span class="en">Location</span>: 24r-v</h4>
+                        <h4>
+                           <span class="pt">Copista</span>
+                           <span class="en">Copyist</span>: c</h4>
+                        <ol start="1">
+                           <li>Deus meu senhor se u prouguer</li>
+                           <li>uosmjtolhedeste poder</li>
+                           <li>que eueydemuytouyuer</li>
+                           <li>ca mentr eu tal poderoer</li>
+                           <li>de uiuer nuncaperderey</li>
+                           <li>estacoytaqueoieu</li>
+                           <li>d amor eno meu coraçon</li>
+                        </ol>
+                        <ol start="8">
+                           <li>Ca
+                        faisautalmolh</li>
+                           <li>qnuca
+                        redefaz</li>
+                           <li>pqeupossa iapd</li>
+                           <li>qenqteuuiupoder</li>
+                           <li>pesto a nopodei</li>
+                           <li>pder premaysaue</li>
+                           <li>delamayscomuygramrazon</li>
+                        </ol>
+                        <ol start="15">
+                           <li>E qt estacotad amor</li>
+                           <li>huaaqomfalarue</li>
+                           <li>seu amleixaseseube</li>
+                           <li>ouse
+                        fazmelh</li>
+                           <li>mayssemelamuytoutmal</li>
+                           <li>a teestacotatal</li>
+                           <li>macarxemorre nolhpraz</li>
+                        </ol>
+                     </div>
+                  </div>
+               </div>
+               <div id="A2B92" class="poem">
+                  <div class="metadata pt">
+                     <h2>Cantiga: A2, B92</h2>
+                     <h2>Autor: Vasco Fernandez Praga de Sandin</h2>
+                     <h2>Período: 1200-1240 (período 2)</h2>
+                  </div>
+                  <div class="metadata en">
+                     <h2>Song: A2, B92</h2>
+                     <h2>Author: Vasco Fernandez Praga de Sandin</h2>
+                     <h2>Period: 1200-1240 (period 2)</h2>
+                  </div>
+                  <div class="body">
+                     <div class="witness">
+                        <h3>
+                           <span class="pt">Testemunho</span>
+                           <span class="en">Witness</span>: A</h3>
+                        <h4>Text<span class="pt">o</span>: A2</h4>
+                        <h4>
+                           <span class="pt">Localização</span>
+                           <span class="en">Location</span>: 1r</h4>
+                        <h4>
+                           <span class="pt">Copista</span>
+                           <span class="en">Copyist</span>: α</h4>
+                        <ol start="1">
+                           <li>Sennorfremosagrandenueiaei</li>
+                           <li>eu a tod ome que ueio morrer</li>
+                           <li>esegudora o meucooer</li>
+                           <li>enquantestefaçomuigranrazon</li>
+                           <li>caeipor uos e no meu coraçon</li>
+                           <li>tangranctaque mil uezesmeten</li>
+                           <li>sennorsenfalla sentod osen</li>
+                           <li>enousqueredesdemidoer</li>
+                        </ol>
+                        <ol start="9">
+                           <li>Peroseor uarenudirei</li>
+                           <li>contod est ora noeieu poder</li>
+                           <li>p boa fedenullenueia auer</li>
+                           <li>anullome dequantosuiuosso</li>
+                           <li>maisfaç eu esto por qseicano</li>
+                           <li>uiuenullomeq de uosmaisbe</li>
+                           <li>aia demiquenoeide uos ren</li>
+                           <li>se noquantorameoystesdiz</li>
+                        </ol>
+                        <ol start="17">
+                           <li>E por qseitan ben p boa fe</li>
+                           <li>quenoseicousa nomundomellor</li>
+                           <li>q iaentantocom euuiuofor</li>
+                           <li>nullacousa no me pode guardar</li>
+                           <li>d aqsta cuita que leuo leuar</li>
+                           <li>se eu de uosalgunben noouuer</li>
+                           <li>o q (d|m)mende guardar no poder</li>
+                           <li>ia me nopodeen alpstarseor</li>
+                        </ol>
+                        <ol start="25">
+                           <li>Ca estactaseortangnde</li>
+                           <li>com euuosdixeia o e mayor</li>
+                           <li>ebencreede q no e meor</li>
+                           <li>e orapords qusfez falar</li>
+                           <li>muj benseormuibesemellar</li>
+                           <li>
+                        demipuguer</li>
+                           <li>e se ofezerdes ia foymoller</li>
+                           <li>quexepensode saalmapeor</li>
+                        </ol>
+                     </div>
+                     <div class="witness">
+                        <h3>
+                           <span class="pt">Testemunho</span>
+                           <span class="en">Witness</span>: B</h3>
+                        <h4>Text<span class="pt">o</span>: B92</h4>
+                        <h4>
+                           <span class="pt">Localização</span>
+                           <span class="en">Location</span>: 24v</h4>
+                        <h4>
+                           <span class="pt">Copista</span>
+                           <span class="en">Copyist</span>: c</h4>
+                        <ol start="1">
+                           <li>Senhorfremosamuygradenueiaey</li>
+                           <li>eu a tod ome que ueio morrer</li>
+                           <li>esegundora o meuconhocer</li>
+                           <li>enquantestfaçomuygramrazon</li>
+                           <li>caeypor uos e no meu coraçon</li>
+                           <li>tangramcotaque mil uezesmetem</li>
+                           <li>senhorsenfala
+                        tod osem</li>
+                           <li>enonuqueredesdmdoer</li>
+                        </ol>
+                        <ol start="9">
+                           <li>Perosenhorhuareudirey</li>
+                           <li>cotod est ora noeyeu poder</li>
+                           <li>p
+                        denuenueia auer</li>
+                           <li>anullome dequatuiuosson</li>
+                           <li>maysfaç eu esto por qseycanon</li>
+                           <li>uyuenullomq de uosmaysben</li>
+                           <li>aia demqnoeyde uos ren</li>
+                           <li>se noquatoramoystesdizer</li>
+                        </ol>
+                        <ol start="17">
+                           <li>E por qseytan ben p boa fe</li>
+                           <li>qnoseycousa nomudomelhor</li>
+                           <li>q iaentatocom euuyuofor</li>
+                           <li>nullacousa no me pode guardar</li>
+                           <li/>
+                           <li>se eu de uosalguben nooer</li>
+                           <li>o q (d|m)mende guardar no poder</li>
+                           <li>ia me nopoden alprestarsenhor</li>
+                        </ol>
+                        <ol start="25">
+                           <li>Ca estacotasenhortamgrande</li>
+                           <li>com euudixiia o e mayor</li>
+                           <li>ebecreede q no emeor</li>
+                           <li>e orapds qufez falar</li>
+                           <li>muj bensenhormujbensemelhar</li>
+                           <li>
+                        dempuguer</li>
+                           <li>
+                        fezerdes ia foymolher</li>
+                           <li>qxipenssou
+                        almapeyor</li>
+                        </ol>
+                     </div>
+                  </div>
+               </div>
+               <div id="A3B93" class="poem">
+                  <div class="metadata pt">
+                     <h2>Cantiga: A3, B93</h2>
+                     <h2>Autor: Vasco Fernandez Praga de Sandin</h2>
+                     <h2>Período: 1200-1240 (período 2)</h2>
+                  </div>
+                  <div class="metadata en">
+                     <h2>Song: A3, B93</h2>
+                     <h2>Author: Vasco Fernandez Praga de Sandin</h2>
+                     <h2>Period: 1200-1240 (period 2)</h2>
+                  </div>
+                  <div class="body">
+                     <div class="witness">
+                        <h3>
+                           <span class="pt">Testemunho</span>
+                           <span class="en">Witness</span>: A</h3>
+                        <h4>Text<span class="pt">o</span>: A3</h4>
+                        <h4>
+                           <span class="pt">Localização</span>
+                           <span class="en">Location</span>: 1v</h4>
+                        <h4>
+                           <span class="pt">Copista</span>
+                           <span class="en">Copyist</span>: α</h4>
+                        <ol start="1">
+                           <li>Sennorfremosapardeusgnsazon</li>
+                           <li>seria iaagorase en prazer</li>
+                           <li>uoscaesse de quererdes prender</li>
+                           <li>doo demica ben de la sazon</li>
+                           <li>queuseu ujqueuuscofalei</li>
+                           <li>
+                         sabecanuncadeseiei</li>
+                           <li>ben deste mundo se o uosso non</li>
+                        </ol>
+                        <ol start="8">
+                           <li>Bendeseiareino meucoraçon</li>
+                           <li>enquat eu iaenomundouiuer</li>
+                           <li>ca deprauseimayorbenquerer</li>
+                           <li>de quatas cousas enomundoson</li>
+                           <li>e demais uacousauosdirei</li>
+                           <li>nomeqtararen eu ben osei</li>
+                           <li>
+                        deuosqrerassise morteno</li>
+                        </ol>
+                        <ol start="15">
+                           <li>Ca de pra se (d|m)mendouuessaqtar</li>
+                           <li>nullacousa sen mortemiaseor</li>
+                           <li>
+                        omuigransabor</li>
+                           <li>q uueioauer de malogar</li>
+                           <li>de uosmuimaisca outromeporen</li>
+                           <li>maismiasenor
+                        uaren</li>
+                           <li>nousam euporardessamar</li>
+                        </ol>
+                        <ol start="22">
+                           <li>
+                        creede mais poruosbuscar</li>
+                           <li>muitoenquant euuiuo foruic</li>
+                           <li>epor queu fez pareçermellor</li>
+                           <li>deusdoutra dona emellorfalar</li>
+                           <li>e elqueu tal fez se (d|m)malgu ben</li>
+                           <li>no der de uossenorno me de sen</li>
+                           <li>nenpoder deuosporedesamar</li>
+                        </ol>
+                        <ol start="29">
+                           <li>Caseieubenuoutrarenno iaz</li>
+                           <li>cameseramiasenormaismest</li>
+                           <li>
+                        se end a uos puguer</li>
+                           <li>camesera o mayorbenq faz</li>
+                           <li>eestemundomeoutramoller</li>
+                        </ol>
+                     </div>
+                     <div class="witness">
+                        <h3>
+                           <span class="pt">Testemunho</span>
+                           <span class="en">Witness</span>: B</h3>
+                        <h4>Text<span class="pt">o</span>: B93</h4>
+                        <h4>
+                           <span class="pt">Localização</span>
+                           <span class="en">Location</span>: 24v-25r</h4>
+                        <h4>
+                           <span class="pt">Copista</span>
+                           <span class="en">Copyist</span>: c</h4>
+                        <ol start="1">
+                           <li>Senhorfremosapdegsazon</li>
+                           <li>seria iaorase en prazer</li>
+                           <li>ucaesse de quererdes prender</li>
+                           <li>doo demca ben de la sazon</li>
+                           <li>queueu ujequeuoscofaley</li>
+                           <li>
+                         sabequenuncadeseiey</li>
+                           <li>ben deste mundo se o uosso non</li>
+                        </ol>
+                        <ol start="8">
+                           <li>Nedeseiareyno meucoraço</li>
+                           <li>enquat eu ianomudouiuer</li>
+                           <li>ca depramuseymayorbeqrer</li>
+                           <li>de quatas cousas enomudoson</li>
+                           <li>e demayshuacousaudirey</li>
+                           <li>nomequitararen eu ben osey</li>
+                           <li>edeuqrerassyse mortenon</li>
+                        </ol>
+                        <ol start="15">
+                           <li>Ca de pra se (d|m)mendssaqutar</li>
+                           <li>nullacousa sen mortemhasenh</li>
+                           <li>
+                        omuygrasabor</li>
+                           <li>q uueiauer de malongar</li>
+                           <li>de uosmujmaysca outromepen</li>
+                           <li>maysmhasenhor
+                        hua</li>
+                           <li>nouam eupardesamar</li>
+                        </ol>
+                        <ol start="22">
+                           <li>
+                        creede mais porubuscar</li>
+                           <li>muytoenquatouiuo forsuiç</li>
+                           <li>ep qu fez pareçermelhor</li>
+                           <li>dsdoutra dona emelhorfalar</li>
+                           <li>e elqu tal fez se (d|m)malgu ben</li>
+                           <li>no der de uossenhorno me de sen</li>
+                           <li>nepoder deuporendesamar</li>
+                        </ol>
+                        <ol start="29">
+                           <li>Caseyeubehuoutreno iaz</li>
+                           <li>camjseramhasenhormaysmest</li>
+                           <li>
+                        se end a uos puguer</li>
+                           <li>camjsera o mayorbeq faz</li>
+                           <li>enestemudaomoutmolher</li>
+                        </ol>
+                     </div>
+                  </div>
+               </div>
+               <div id="A4B94" class="poem">
+                  <div class="metadata pt">
+                     <h2>Cantiga: A4, B94</h2>
+                     <h2>Autor: Vasco Fernandez Praga de Sandin</h2>
+                     <h2>Período: 1200-1240 (período 2)</h2>
+                  </div>
+                  <div class="metadata en">
+                     <h2>Song: A4, B94</h2>
+                     <h2>Author: Vasco Fernandez Praga de Sandin</h2>
+                     <h2>Period: 1200-1240 (period 2)</h2>
+                  </div>
+                  <div class="body">
+                     <div class="witness">
+                        <h3>
+                           <span class="pt">Testemunho</span>
+                           <span class="en">Witness</span>: A</h3>
+                        <h4>Text<span class="pt">o</span>: A4</h4>
+                        <h4>
+                           <span class="pt">Localização</span>
+                           <span class="en">Location</span>: 1v</h4>
+                        <h4>
+                           <span class="pt">Copista</span>
+                           <span class="en">Copyist</span>: α</h4>
+                        <ol start="1">
+                           <li>Qvenogemayorctaten</li>
+                           <li>d amorenoseu coraçon</li>
+                           <li>dequantosdelcuitados</li>
+                           <li>nostrasennoreponna</li>
+                           <li>conseose a elpuguer</li>
+                           <li>atalperquella tollaen</li>
+                        </ol>
+                        <ol start="7">
+                           <li>E creed ora huaren</li>
+                           <li>ca noeoutrese eu no</li>
+                           <li>qmiatiuedelasazon</li>
+                           <li>q eupmamenteuj</li>
+                           <li>p boa fe atalmoer</li>
+                           <li>q da mujpoucoorapore</li>
+                        </ol>
+                        <ol start="13">
+                           <li>Maispoenquateuuiuer</li>
+                           <li>senpa iamaisamarei</li>
+                           <li>doutracousa erogarei</li>
+                           <li>omaisq eupoderrogar</li>
+                           <li>adeq elmialeixeoyr</li>
+                           <li>falarmia leixe ueer</li>
+                        </ol>
+                        <ol start="19">
+                           <li> s oelequiserfazer</li>
+                           <li>Elogoeuctasentirei</li>
+                           <li>cayndauosmaisdirei</li>
+                           <li>logmiauereiaquitar</li>
+                           <li>denuncaiactasentir</li>
+                           <li>enosdiasqueeuuiuer</li>
+                        </ol>
+                     </div>
+                     <div class="witness">
+                        <h3>
+                           <span class="pt">Testemunho</span>
+                           <span class="en">Witness</span>: B</h3>
+                        <h4>Text<span class="pt">o</span>: B94</h4>
+                        <h4>
+                           <span class="pt">Localização</span>
+                           <span class="en">Location</span>: 25r</h4>
+                        <h4>
+                           <span class="pt">Copista</span>
+                           <span class="en">Copyist</span>: c</h4>
+                        <ol start="1">
+                           <li>Qvenoiemayorcotaten</li>
+                           <li>d amorenoseu coraçon</li>
+                           <li>dequantdelcuytad</li>
+                           <li>nostrasenhorlhponhai</li>
+                           <li>selhose a elprouguer</li>
+                           <li>atalpquelha tolhaen</li>
+                        </ol>
+                        <ol start="7">
+                           <li>E creed ora huare</li>
+                           <li>ca noestoutmse eu no</li>
+                           <li>qmhatiujdelasazo</li>
+                           <li>q eupmyrameteuj</li>
+                           <li>p boa fe atalmolh</li>
+                           <li>q da mujpoucorapen</li>
+                        </ol>
+                        <ol start="13">
+                           <li>Mayspoenqteuuiu</li>
+                           <li>sempa iaamei</li>
+                           <li>doutcousa eroge</li>
+                           <li>omaysq eupodrog</li>
+                           <li>adsq elmhaleixoyr</li>
+                           <li>falaremha leixe ueer</li>
+                        </ol>
+                        <ol start="19">
+                           <li>
+                        elquisfazer</li>
+                           <li>logeucotanosentirey</li>
+                           <li>caaindaumais...</li>
+                           <li>logomaueaqtar</li>
+                           <li>denucaiacotasentir</li>
+                           <li>endiasquyuer</li>
+                        </ol>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <aside id="move">
+               <h3 class="pt">Cantigas</h3>
+               <h3 class="en">Songs</h3>
+               <ul>
+                  <li>
+                     <a href="#A1B91">A1, B91</a>
+                  </li>
+                  <li>
+                     <a href="#A2B92">A2, B92</a>
+                  </li>
+                  <li>
+                     <a href="#A3B93">A3, B93</a>
+                  </li>
+                  <li>
+                     <a href="#A4B94">A4, B94</a>
+                  </li>
+               </ul>
+            </aside>
+         </div>
+         <div id="footer"/>
+      </main>
+   </body>
+</html>

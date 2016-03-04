@@ -23,7 +23,7 @@ function readCookie(name) {
 
 
 
- function init () {
+ function language () {
   var siglas = document.getElementsByClassName('language');
   for (i = 0; i < siglas.length; i++) {
    siglas[i].addEventListener('click', changeLang, false);
@@ -69,4 +69,4 @@ function readCookie(name) {
   }
 }
 
- window.addEventListener('load',init,false);
+ window.addEventListener('load',language,false);

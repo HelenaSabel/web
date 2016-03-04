@@ -20,7 +20,7 @@ main{
     font-size: 115%;
     margin: 0%;
     padding-top: 2%;
-    padding-bottom:2%;
+    padding-bottom: 2%;
 }
 
 @font-face{
@@ -139,71 +139,167 @@ p{
     display: none;
 }
 
-.hide {
-    display:none;
+/* Footer */
+
+footer{
+    display:flex;
+}
+
+
+.license p{
+    padding-top:0.5%;
+}
+
+.license > a {
+    text-align:center;
+}
+
+.acknowledments{
+    margin-left:1.65%;
+}
+
+.acknowledments img{
+    width: 50%;
+}
+
+/* Edition */
+
+.multiple{
+    display: flex;
+}
+
+.body{
+
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.center{
+    text-align: center;
+}
+
+.witness{
+    padding-left: 3%;
+    padding-right: 8%;
+    margin-bottom: 2%;
+}
+
+section{
+    width: 85%;
+    border-right: 1px solid #2b3966;
+}
+
+
+section h3{
+    display: flex;
+    margin-left: 7.5%;
+    margin-bottom: 2%;
+
+}
+
+section h4{
+    display: flex;
+    margin-left: 7.5%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+
+.metadata h2{
+    color: #F2F2AF;
+    font-size: 115%;
+}
+
+aside{
+    padding-left: 1%;
+    width: 15%;
+    padding-top: 1%;
+}
+
+aside ul{
+    list-style-type: square;
+}
+
+.metadata{
+    padding: 1%;
+    background-color: #562302;
+}
+
+.body{
+    display: flex;
+}
+
+/*Web form songs */
+
+.hide{
+    display: none;
 }
 
 fieldset{
     border: 1px solid #2b3966;
-    margin:1%;
+    margin: 1%;
 }
 
-fieldset > div {
-    display:flex;
+fieldset > div{
+    display: flex;
 }
 
-fieldset span {
-    margin-right:1%;
-    padding-left:.5%;
+fieldset span{
+    margin-right: 1%;
+    padding-left: .5%;
 }
 
-fieldset ul {
-    list-style:none;
-    padding:0;
+fieldset ul{
+    list-style: none;
+    padding: 0;
 }
 
-fieldset li {
-    padding-bottom:8%;
+fieldset li{
+    padding-bottom: 8%;
 }
 
-legend {
-  padding: 0.2em 0.5em;
-  border: 1px solid #2b3966;
-  color:#2b3966;
-  font-size:90%;
-  font-weight:500;
-  }
-  
-  .button {
-      color:white;
-      background-color:#2b3966;
-      padding:0.5em;
-      margin-left:1%;
-  }
+legend{
+    padding: 0.2em 0.5em;
+    border: 1px solid #2b3966;
+    color: #2b3966;
+    font-size: 90%;
+    font-weight: 500;
+}
 
-@media all and (max-width: 940px){
+.button{
+    color: white;
+    background-color: #2b3966;
+    padding: 0.5em;
+    margin-left: 1%;
+}
+
+
+
+/*  Small devices compatibility */
+
+@media all and (max-width : 940px){
     menu{
-        font-size: smaller;}
+        font-size: smaller;
+    }
 }
 
 @media all and (max-width : 805px){
     .languages{
         display: inline;
     }
-    
-    .languages span {
-        margin:0;
-        padding:0;        
+
+    .languages span{
+        margin: 0;
+        padding: 0;
     }
-    
+
     .languages a{
-        padding:0;
+        padding: 0;
     }
     menu > ul{
         padding-left: 0;
     }
-    
-    menu a {
+
+    menu a{
         padding-right: 5px;
         padding-left: 5px;
     }
@@ -236,19 +332,19 @@ legend {
     menu > ul a{
         line-height: 40px;
     }
-    
-    menu a {
-        padding-bottom:0%;
+
+    menu a{
+        padding-bottom: 0%;
     }
-    
+
     menu > ul ul{
         position: relative;
     }
     menu li.tap ul{
-        display: block;        
+        display: block;
         background-color: inherit;
-        padding-left:4%;
-    }    
+        padding-left: 4%;
+    }
 
     body{
         margin: 0;
@@ -259,6 +355,6 @@ legend {
         flex-direction: column;
     }
     menu{
-        flex-direction:row;
+        flex-direction: row;
     }
 }

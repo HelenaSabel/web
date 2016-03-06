@@ -14,5 +14,4 @@ function hide() {
 }
 
 
-
 window.onload = select

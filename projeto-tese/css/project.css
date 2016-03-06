@@ -16,7 +16,7 @@ body{
 
 main{
     background-color: #eae5c5;
-    font-family: born;
+    font-family: 'born';
     font-size: 115%;
     margin: 0%;
     padding-top: 2%;
@@ -123,7 +123,7 @@ a{
 }
 
 @font-face{
-    font-family: born;
+    font-family: 'born';
     src: url('../fonts/Born.otf');
 }
 
@@ -226,6 +226,98 @@ aside ul{
 
 .body{
     display: flex;
+    
+}
+
+.body ol {
+    font-family: 'junicode';
+}
+
+.flex {
+    display:flex;
+}
+
+.am {
+    display:none;
+}
+
+.ex {
+    font-style:italic;
+}
+
+.orig{
+    display:none;
+}
+
+.graphic {
+    font-weight:bold;
+}
+
+.error {
+    color: #D14205;
+}
+
+.linguistic {
+    color: #2B3966;
+    text-decoration: underline;
+    font-weight:bold;
+}
+
+.equipolent{
+    text-decoration:underline;
+}
+
+del {
+    color:red;
+    text-decoration:none;
+}
+
+.overstrike {
+    text-decoration:line-through;
+}
+
+.criteria fieldset {
+    border:none;
+}
+
+.criteria {
+    margin-bottom:2%;
+    border:1px solid #2b3966;
+    margin-left:1.65%;
+    margin-right:1.66%;
+    
+} 
+.enhance {
+    color: #17C845;
+    vertical-align: super;
+    font-size: smaller;
+}
+@font-face{
+    font-family: 'junicode';
+    src: url('../fonts/junicode/Junicode.ttf');
+    font-style: normal;
+    font-weight:normal;
+}
+
+@font-face{
+    font-family: 'junicode';
+    src: url('../fonts/junicode/Junicode-Italic.ttf');
+    font-style: italic;
+    font-weight:normal;
+}
+
+@font-face{
+    font-family: 'junicode';
+    src: url('../fonts/junicode/Junicode-BoldItalic.ttf');
+    font-style: italic;
+    font-weight:bold;
+}
+
+@font-face{
+    font-family: 'junicode';
+    src: url('../fonts/junicode/Junicode-Bold.ttf');
+    font-style: normal;
+    font-weight:bold;
 }
 
 /*Web form songs */

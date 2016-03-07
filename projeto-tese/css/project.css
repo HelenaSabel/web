@@ -142,20 +142,20 @@ p{
 /* Footer */
 
 footer{
-    display:flex;
+    display: flex;
 }
 
 
 .license p{
-    padding-top:0.5%;
+    padding-top: 0.5%;
 }
 
-.license > a {
-    text-align:center;
+.license > a{
+    text-align: center;
 }
 
 .acknowledments{
-    margin-left:1.65%;
+    margin-left: 1.65%;
 }
 
 .acknowledments img{
@@ -226,68 +226,89 @@ aside ul{
 
 .body{
     display: flex;
-    
+
 }
 
-.body ol {
+.body ol{
     font-family: 'junicode';
 }
 
-.flex {
-    display:flex;
+.flex{
+    display: flex;
 }
 
-.am {
-    display:none;
+.flex svg {
+    padding-right:5px;
 }
 
-.ex {
-    font-style:italic;
+.flex p{
+    display: flex;
+}
+
+.popup svg{
+    width: 17px;
+    height: 17px;
+}
+
+.am{
+    display: none;
+}
+
+.ex{
+    font-style: italic;
 }
 
 .orig{
-    display:none;
+    display: none;
 }
 
-.graphic {
-    font-weight:bold;
+.graphic{
+    font-weight: bold;
 }
 
-.error {
+.error{
     color: #D14205;
 }
 
-.linguistic {
+.linguistic{
     color: #2B3966;
     text-decoration: underline;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 .equipolent{
-    text-decoration:underline;
+    text-decoration: underline;
 }
 
-del {
-    color:red;
-    text-decoration:none;
+del{
+    color: red;
+    text-decoration: none;
 }
 
-.overstrike {
-    text-decoration:line-through;
+.overstrike{
+    text-decoration: line-through;
 }
 
-.criteria fieldset {
-    border:none;
+.criteria fieldset{
+    border: none;
 }
 
-.criteria {
-    margin-bottom:2%;
-    border:1px solid #2b3966;
-    margin-left:1.65%;
-    margin-right:1.66%;
-    
-} 
-.enhance {
+.criteria{
+    margin-bottom: 2%;
+    border: 1px solid #2b3966;
+    margin-left: 1.65%;
+    margin-right: 1.66%;
+
+}
+
+.dinamic span{
+    border: 1px solid #2b3966;
+    font-size: smaller;
+    padding: 1% 2% 1% 2%;
+    color: #2b3966;
+
+}
+.enhance{
     color: #17C845;
     vertical-align: super;
     font-size: smaller;
@@ -296,28 +317,28 @@ del {
     font-family: 'junicode';
     src: url('../fonts/junicode/Junicode.ttf');
     font-style: normal;
-    font-weight:normal;
+    font-weight: normal;
 }
 
 @font-face{
     font-family: 'junicode';
     src: url('../fonts/junicode/Junicode-Italic.ttf');
     font-style: italic;
-    font-weight:normal;
+    font-weight: normal;
 }
 
 @font-face{
     font-family: 'junicode';
     src: url('../fonts/junicode/Junicode-BoldItalic.ttf');
     font-style: italic;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 @font-face{
     font-family: 'junicode';
     src: url('../fonts/junicode/Junicode-Bold.ttf');
     font-style: normal;
-    font-weight:bold;
+    font-weight: bold;
 }
 
 /*Web form songs */

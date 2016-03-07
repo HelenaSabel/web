@@ -1,9 +1,7 @@
-"use strict";
-
 function tooltip() {
-    var spans = document.querySelectorAll('[data-exp]')
-for (var i = 0; i < spans.length; i++) {
-        spans[i].addEventListener('click', popup, true);
+    var myspans = document.querySelectorAll('span[data-exp]');
+    for (var i = 0; i < myspans.length; i++) {
+        myspans[i].addEventListener('click', popup, false);
     }
 }
 
@@ -29,15 +27,15 @@ function popup(event) {
         overlay.style.margin = "0";
         overlay.style.padding = ".5em";
         overlay.dataset.pointer = random;
-        overlay.addEventListener('click', destroy, false);
+        overlay.addEventListener('click', destruir, false);
         document.body.appendChild(overlay);
     }
 }
 
-function destroy() {
-    var span = document.getElementById(this.dataset.pointer);
-    span.removeAttribute("id");
+function destruir() {
+    var myspan = document.getElementById(this.dataset.pointer);
+    myspan.removeAttribute("id");
     document.body.removeChild(this);
 }
 
-window.onload = tooltip;
+window.addEventListener('load', tooltip, false);

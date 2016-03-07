@@ -102,5 +102,6 @@ return
                 }
             
             </ul>
+            <p class="dinamic"><span class="pt">Mudar critérios</span><span class="en">Change criteria</span></p>
         </aside>
     </div>

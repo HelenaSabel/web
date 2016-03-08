@@ -11,18 +11,18 @@
         <script src="http://bigspotteddog.github.io/ScrollToFixed/jquery-scrolltofixed.js" type="text/javascript">/**/</script>
         <script src="javascript/sidebar.js" type="text/javascript">/**/</script>
         <script src="javascript/sorttable.js" type="text/javascript">/**/</script>
+        
         <!--#include virtual="ssi/favicon.html"-->
     </head>
     <body><!--#include virtual="ssi/header.html"-->
         <main>
-            <h1><span class="pt">Variantes de língua</span><span class="en">Linguistic variants</span></h1>
-            <?php $parameters = '?';
-                foreach($_POST as $key => $value) {
-                    $parameters = $parameters . "$key=$value&";
-                }
-                
+            <h1><span class="pt">Variantes de língua</span><span class="en">Linguistic
+                    variants</span></h1>
+                <?php
+                $parameters = $_GET['phenomenon'];
+                $values = implode(",", $parameters);
                 require_once('config.php');
-                $query = REST_PATH . "/db/VTLGP/queries/ling.xquery" . $parameters;
+                $query = REST_PATH . "/db/VTLGP/queries/ling.xquery?phenomenon=" . $values;
                 echo file_get_contents($query);
             ?>
             <div id="footer"></div>

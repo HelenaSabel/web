@@ -75,15 +75,33 @@
                             >View deletations</span>
                     </fieldset>
                 </form></div>
-            <?php $parameter = '?';
+               <?php 
+                foreach (array_keys($_GET) as $field)
+                {
+                $parameters = $_GET[$field];}
+                $values = implode(",", $parameters);
+                require_once('config.php');
+                $query = REST_PATH . "/db/VTLGP/queries/edition.xquery?" . $field . "=" . $values;
+                echo file_get_contents($query);
+                ?>
+
+                 <!--<?php 
+                foreach ($_POST as $name => $val)
+                {
+                $parameters = $_GET[$name];}
+                $values = implode(",", $parameters);
+                require_once('config.php');
+                $query = REST_PATH . "/db/VTLGP/queries/edition.xquery?" . $name . "=" . $values;
+                echo file_get_contents($query);
+?>-->
+            <!--<?php 
                 foreach($_POST as $key => $value) {
-                    $parameter = $parameter . "$key=$value&";
+                    $parameter = implode (",", $value);
                 }
-                
                 require_once('config.php');
                 $xquery = REST_PATH . "/db/VTLGP/queries/edition.xquery" . $parameter;
                 echo file_get_contents($xquery);
-            ?>
+            ?>-->
             <div id="footer"></div>
         </main>
         <!--#include virtual="ssi/footer.html"-->

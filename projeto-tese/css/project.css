@@ -459,8 +459,9 @@ ul ul {
     margin:0;
 }
 
-.phenom h3{
-    margin:0;
+.phenom h2{
+    margin-left:0;
+    padding-top:3%;
 }
 
 input{

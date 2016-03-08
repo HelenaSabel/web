@@ -8,8 +8,7 @@
       <script src="javascript/menu.js" type="text/javascript">/**/</script>
       <script src="javascript/show.js" type="text/javascript">/**/</script>
       <script src="javascript/deselect.js" type="text/javascript">/**/</script>
-      <script src="javascript/language.js" type="text/javascript">/**/</script>      
-      <script src="javascript/checkboxes.js" type="text/javascript">/**/</script>
+      <script src="javascript/language.js" type="text/javascript">/**/</script>   
       <!--#include virtual="ssi/favicon.html"-->
    </head>
    <body><!--#include virtual="ssi/header.html"-->

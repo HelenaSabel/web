@@ -171,7 +171,6 @@ footer{
 }
 
 .body{
-    flex-grow: 1;
     margin-top: 2%;
     margin-bottom: 2%;
 }
@@ -183,6 +182,7 @@ footer{
     padding-left: 3%;
     padding-right: 8%;
     margin-bottom: 2%;
+    flex-grow: 1;
 }
 
 section{
@@ -232,7 +232,7 @@ aside ul{
 }
 
 .body ol{
-    font-family: 'junicode';
+    font-family: 'junicode', 'Free Serif', 'EversonMono';
 }
 
 .flex{
@@ -315,33 +315,64 @@ del{
     vertical-align: super;
     font-size: smaller;
 }
-@font-face{
-    font-family: 'junicode';
-    src: url('../fonts/junicode/Junicode.ttf');
-    font-style: normal;
-    font-weight: normal;
-}
 
-@font-face{
+
+@font-face {
     font-family: 'junicode';
-    src: url('../fonts/junicode/Junicode-Italic.ttf');
+    src: url('../fonts/junicode/junicode-italic-webfont.eot');
+    src: url('../fonts/junicode/junicode-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/junicode/junicode-italic-webfont.woff2') format('woff2'),
+         url('../fonts/junicode/junicode-italic-webfont.woff') format('woff'),
+         url('../fonts/junicode/junicode-italic-webfont.ttf') format('truetype'),
+         url('../fonts/junicode/junicode-italic-webfont.svg#junicodeitalic') format('svg');
+    font-weight: normal;
     font-style: italic;
-    font-weight: normal;
 }
 
-@font-face{
+@font-face {
     font-family: 'junicode';
-    src: url('../fonts/junicode/Junicode-BoldItalic.ttf');
+    src: url('../fonts/junicode/junicode-webfont.eot');
+    src: url('../fonts/junicode/junicode-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/junicode/junicode-webfont.woff2') format('woff2'),
+         url('../fonts/junicode/junicode-webfont.woff') format('woff'),
+         url('../fonts/junicode/junicode-webfont.ttf') format('truetype'),
+         url('../fonts/junicode/junicode-webfont.svg#junicoderegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+/*@font-face {
+    font-family: 'junicode';
+    src: url('../fonts/junicode/junicode-bold-webfont.eot');
+    src: url('../fonts/junicode/junicode-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/junicode/junicode-bold-webfont.woff2') format('woff2'),
+         url('../fonts/junicode/junicode-bold-webfont.woff') format('woff'),
+         url('../fonts/junicode/junicode-bold-webfont.ttf') format('truetype'),
+         url('../fonts/junicode/junicode-bold-webfont.svg#junicodebold') format('svg');
+    font-style: normal;
+    font-weight: bold;
+
+}*/
+
+
+
+
+/*@font-face {
+    font-family: 'junicode';
+    src: url('../fonts/junicode/junicode-bolditalic-webfont.eot');
+    src: url('../fonts/junicode/junicode-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/junicode/junicode-bolditalic-webfont.woff2') format('woff2'),
+         url('../fonts/junicode/junicode-bolditalic-webfont.woff') format('woff'),
+         url('../fonts/junicode/junicode-bolditalic-webfont.ttf') format('truetype'),
+         url('../fonts/junicode/junicode-bolditalic-webfont.svg#junicodebold_italic') format('svg');
     font-style: italic;
     font-weight: bold;
-}
 
-@font-face{
-    font-family: 'junicode';
-    src: url('../fonts/junicode/Junicode-Bold.ttf');
-    font-style: normal;
-    font-weight: bold;
-}
+}*/
 
 /*Web form songs */
 
@@ -435,7 +466,7 @@ tbody td:nth-child(1){
     font-style:italic;
 }
 
-tbody td:nth-child(1) span.normal,
+tbody td:nth-child(1) span.normal, tbody td:nth-child(1)
 .ex{
     font-style:normal;
 }

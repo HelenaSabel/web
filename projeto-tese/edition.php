@@ -62,7 +62,7 @@
                              /><span class="en">Hyphenated clitics and allomoph articles</span><span
                             class="pt">Clíticos e segunda forma do artigo com hífen</span><input
                             type="radio" name="hyphen" value="orig" /><span class="en">Original
-                            disposition of clitics and allomophs</span><span class="pt">Conservação
+                            disposition of clitics and allomorphs</span><span class="pt">Conservação
                             da disposição original de clíticos e artigos alomorfos</span>
                     </fieldset>
                     <fieldset><input type="checkbox" name="apostrophe" value="apostrophe"
@@ -75,6 +75,7 @@
                             >View deletations</span>
                     </fieldset>
                 </form></div>
+                <!--   
                <?php 
                 foreach (array_keys($_GET) as $field)
                 {
@@ -83,25 +84,38 @@
                 require_once('config.php');
                 $query = REST_PATH . "/db/VTLGP/queries/edition.xquery?" . $field . "=" . $values;
                 echo file_get_contents($query);
+               
+                ?>
+            
+               
+<?php
+                $fields = array_keys($_GET);
+                $data = array();
+                foreach ($fields as $field) {
+                if (isset($_GET[$field])) {
+                $data[$field] = $_GET[$field];}
+                $values = implode(",", $data);}
+                require_once('config.php');
+                $query = REST_PATH . "/db/VTLGP/queries/edition.xquery?" . $field . "=" . $values;
+                echo file_get_contents($query);
+?>--> 
+         <?php 
+                
+                $songs = $_GET["song"];
+                $songValues = implode(",", $songs);
+                $authors = $_GET["author"];
+                $authorValues = implode(",", $authors);
+                $periods = $_GET["period"];
+                $periodValues = implode(",", $periods);
+                $scribes = $_GET["scribe"];
+                $scribeValues = implode(",", $scribes);
+                require_once('config.php');
+                $query = REST_PATH . "/db/VTLGP/queries/edition.xquery?song=" . $songValues . "&author=" . $authorValues .
+                 "&period=" . $periodValues . "&scribe=" . $scribeValues;
+                echo file_get_contents($query);
+               
                 ?>
 
-                 <!--<?php 
-                foreach ($_POST as $name => $val)
-                {
-                $parameters = $_GET[$name];}
-                $values = implode(",", $parameters);
-                require_once('config.php');
-                $query = REST_PATH . "/db/VTLGP/queries/edition.xquery?" . $name . "=" . $values;
-                echo file_get_contents($query);
-?>-->
-            <!--<?php 
-                foreach($_POST as $key => $value) {
-                    $parameter = implode (",", $value);
-                }
-                require_once('config.php');
-                $xquery = REST_PATH . "/db/VTLGP/queries/edition.xquery" . $parameter;
-                echo file_get_contents($xquery);
-            ?>-->
             <div id="footer"></div>
         </main>
         <!--#include virtual="ssi/footer.html"-->

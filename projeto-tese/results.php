@@ -18,13 +18,69 @@
         <main>
             <h1><span class="pt">Variantes de língua</span><span class="en">Linguistic
                     variants</span></h1>
+                 
                 <?php
                 $parameters = $_GET['phenomenon'];
                 $values = implode(",", $parameters);
                 require_once('config.php');
                 $query = REST_PATH . "/db/VTLGP/queries/ling.xquery?phenomenon=" . $values;
                 echo file_get_contents($query);
-            ?>
+            ?> 
+            
+            
+        <!--       <?php
+                $parameters = $_POST['phenomenon'];
+                $values = implode(",", $parameters);
+                require_once('config.php');
+                $query = REST_PATH . "/db/VTLGP/queries/ling.xquery";
+                $file = file_put_contents($query, $values);
+                echo file_get_contents($file);
+                
+                ?>
+             <?php   
+             require_once('config.php');
+             $url = REST_PATH . "/db/VTLGP/queries/ling.xquery";
+             $parameters = $_POST['phenomenon'];
+             $data = implode(",", $parameters);
+             $options = array(
+             'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+             'http' => array(
+             'method'  => 'POST',
+             'content' => http_build_query($data),
+                 ),
+                );
+            $context  = stream_context_create($options);
+            $result = file_get_contents($url, false, $context);
+            if ($result === FALSE) { /* Handle error */ }
+            var_dump($result);
+
+        ?>
+        
+        <?php
+            require_once('config.php');
+            $url = REST_PATH . "/db/VTLGP/queries/ling.xquery";
+            $fields = array(
+            '__VIEWSTATE'=>urlencode($state),
+            '__EVENTVALIDATION'=>urlencode($valid),
+            'btnSubmit'=>urlencode('Submit')
+             );
+             
+             $parameters = $_POST['phenomenon'];
+             $data = implode(",", $parameters);
+
+            //open connection
+            $ch = curl_init();
+
+            //set the url, number of POST vars, POST data
+            curl_setopt($ch,CURLOPT_URL,$url);
+            curl_setopt($ch,CURLOPT_POST,count($fields));
+            curl_setopt($ch,CURLOPT_POSTFIELDS,$data);
+
+            //execute post
+            $result = curl_exec($ch);
+            print $result;
+?>-->
+                        
             <div id="footer"></div>
         </main>
         <!--#include virtual="ssi/footer.html"-->
